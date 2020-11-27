@@ -21,7 +21,7 @@ app.prepare()
     .then(() => {
         const server = express();
 
-        server.get('/products', (req, response) => {
+        server.get('/produkter', (req, response) => {
             WooCommerce.get('products', function (err, data, res) {
                 response.json(JSON.parse(res));
             });
