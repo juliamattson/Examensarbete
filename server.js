@@ -21,7 +21,7 @@ app.prepare()
     .then(() => {
         const server = express();
 
-        server.get('/getProducts', (req, response) => {
+        server.get('/products', (req, response) => {
             WooCommerce.get('products', function (err, data, res) {
                 response.json(JSON.parse(res));
             });
@@ -35,7 +35,7 @@ app.prepare()
             if (err) {
                 throw err;
             }
-            console.log(`Ready on ${port}`);
+            console.log(`Site is running on port ${port}`);
         })
 
     })
