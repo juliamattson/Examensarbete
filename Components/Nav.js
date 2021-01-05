@@ -9,12 +9,12 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarColor03">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Hem
+                        <a className="nav-link" href="#">Produkter
           <span className="sr-only">(current)</span>
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Produkter</a>
+                        <a className="nav-link" href="#">Om oss</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">Kontakt</a>
