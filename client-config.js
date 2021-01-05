@@ -1,5 +1,5 @@
 const clientConfig = {
-    siteUrl: 'http://localhost:3000',
+    siteUrl: 'https://wp.hjartanavguld.se',
     graphqlUrl: 'https://wp.hjartanavguld.se/graphql'
 };
 
