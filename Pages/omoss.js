@@ -1,6 +1,6 @@
 import Layout from "../Components/Layout";
 
-const omOss = () => {
+const OmOss = () => {
     return (
         <Layout>
             <div>Om oss</div>
@@ -8,4 +8,4 @@ const omOss = () => {
     )
 };
 
-export default omOss;
+export default OmOss;

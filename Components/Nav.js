@@ -1,4 +1,4 @@
-import omOss from "../Pages/omoss";
+import Link from 'next/link';
 
 const Nav = () => {
     return (
@@ -11,18 +11,20 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarColor03">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="https://wp.hjartanavguld.se/butik/">Produkter
-          <span className="sr-only">(current)</span>
-                        </a>
+                        <Link href={"/omoss"}>
+                            <a className="nav-link" >Hem
+                            <span className="sr-only">(current)</span>
+                            </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="https://wp.hjartanavguld.se/om-oss/">Om oss</a>
+                        <a className="nav-link" href={"/produktsida"}>Produkter</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="https://wp.hjartanavguld.se/kontakt/">Kontakt</a>
+                        <a className="nav-link" href={"/kontakt"}>Kontakt</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="https://wp.hjartanavguld.se/varukorg/">Kundvagn</a>
+                        <a className="nav-link" href={"/cart"}>Kundvagn</a>
                     </li>
                 </ul>
             </div>

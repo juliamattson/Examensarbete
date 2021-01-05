@@ -1,11 +1,11 @@
 import Layout from "../Components/Layout";
 
-const Index = () => {
+const Kontakt = () => {
     return (
         <Layout>
-            <div>Om oss</div>
+            <div>Kontaktinfo</div>
         </Layout>
     )
 };
 
-export default Index;
+export default Kontakt;

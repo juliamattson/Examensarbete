@@ -1,11 +1,11 @@
 import Layout from "../Components/Layout";
 
-const Index = () => {
+const Cart = () => {
     return (
         <Layout>
-            <div>Om oss</div>
+            <div>Kundvagnssida</div>
         </Layout>
     )
 };
 
-export default Index;
+export default Cart;
