@@ -1,3 +1,5 @@
+import omOss from "../Pages/omoss";
+
 const Nav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
