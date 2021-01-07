@@ -16,7 +16,7 @@ const AddToCartButton = (props) => {
             if (existingCart) {
 
             } else {
-                // if no item is in the cart, create an empty array and add item
+                // Add first product to cart
                 const newCart = addFirstProduct(product);
                 setCart(newCart);
             }

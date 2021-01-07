@@ -6,4 +6,28 @@ export const getFloatValue = (string) => {
 
 export const addFirstProduct = (product) => {
     let productPrice = getFloatValue(product.price)
+    // Create empty array
+    let newCart = {
+        products: [],
+        totalProductsCount: 1,
+        totalProductsPrice: productPrice,
+    }
+
+    const newProduct = createNewProduct(product, productPrice, 1);
+    newCart.products.push(newProduct);
+
+    localStorage.setItem('hjartanavguld', JSON.stringify(newCart));
+    return newCart;
+};
+
+// Create a new product object
+export const createNewProduct = (product, productPrice, quantity) => {
+    return {
+        productId: product.id,
+        image: product.image,
+        name: product.name,
+        price: productPrice,
+        quantity: quantity,
+        totalPrice: parseFloat((productPrice * quantity).toFixed(2)),
+    }
 };
