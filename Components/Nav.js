@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CartIcon from './Cart/CartIcon';
 
 const Nav = () => {
     return (
@@ -27,6 +28,7 @@ const Nav = () => {
                         <a className="nav-link" href={"/cart"}>Kundvagn</a>
                     </li>
                 </ul>
+                <CartIcon />
             </div>
         </nav>
     )
