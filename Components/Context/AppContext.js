@@ -11,7 +11,7 @@ export const AppProvider = (props) => {
         if (process.browser) {
             let cartData = localStorage.getItem('hjartanavguld');
             cartData = null !== cartData ? JSON.parse(cartData) : '';
-            setCart({ product: '123' });
+            setCart(cartData);
         }
     }, []);
     return (
