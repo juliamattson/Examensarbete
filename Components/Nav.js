@@ -4,7 +4,7 @@ import CartIcon from './Cart/CartIcon';
 const Nav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#"><img src="http://wp.hjartanavguld.se/wp-content/uploads/2020/11/Peach-and-Gray-Watercolor-Background-Instagram-Post-5.png" alt="logo" className="logo-image" /></a>
+            <a className="navbar-brand" href="#"><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
