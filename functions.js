@@ -35,7 +35,7 @@ export const createNewProduct = (product, productPrice, quantity) => {
 export const updateCart = (existingCart, product, quantityAdded, newQuantity = false) => {
     const updatedProducts = getUpdatedProducts(existingCart.products, product, quantityAdded, newQuantity);
     const addPrice = (total, item) => {
-        total.totalPrice += item.totalPrice;
+        total.totalPrice = item.totalPrice;
         total.quantity += item.quantity;
         return total;
     }
