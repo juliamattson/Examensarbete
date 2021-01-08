@@ -5,16 +5,15 @@ import gql from 'graphql-tag';
 const PRODUCTS_QUERY = gql`query{
     products {
         nodes {
-          id
-          databaseId
-          name
-          image {
-            sourceUrl
-            description
-          }
-          onSale
-          purchasable
           ... on SimpleProduct {
+            id
+            name
+            image {
+              sourceUrl
+              description
+            }
+            onSale
+            purchasable
             price
           }
         }

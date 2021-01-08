@@ -23,19 +23,19 @@ export const addFirstProduct = (product) => {
 // Create a new product object
 export const createNewProduct = (product, productPrice, quantity) => {
     return {
-        productId: product.databaseId,
+        productId: product.id,
         image: product.image,
         name: product.name,
         price: productPrice,
         quantity: quantity,
-        totalPrice: parseFloat((productPrice * quantity).toFixed(2)),
+        totalPrice: parseFloat((productPrice * quantity)),
     }
 };
 
 export const updateCart = (existingCart, product, quantityAdded, newQuantity = false) => {
     const updatedProducts = getUpdatedProducts(existingCart.products, product, quantityAdded, newQuantity);
     const addPrice = (total, item) => {
-        total.totalPrice = item.totalPrice;
+        total.totalPrice += item.totalPrice;
         total.quantity += item.quantity;
         return total;
     }
@@ -51,13 +51,13 @@ export const updateCart = (existingCart, product, quantityAdded, newQuantity = f
 };
 
 export const getUpdatedProducts = (existingProductsInCart, product, quantityAdded, newQuantity = false) => {
-    const existingProductIndex = isProductInCart(existingProductsInCart, product.databaseId);
+    const existingProductIndex = isProductInCart(existingProductsInCart, product.id);
     if (-1 < existingProductIndex) {
         let updatedProducts = existingProductsInCart;
         let updatedProduct = updatedProducts[existingProductIndex];
 
         updatedProduct.quantity = (newQuantity) ? parseInt(newQuantity) : parseInt(updatedProduct.quantity + quantityAdded);
-        updatedProduct.totalPrice = parseFloat(updatedProduct.price * updatedProduct.quantity).toFixed(2);
+        updatedProduct.totalPrice = parseFloat(updatedProduct.price * updatedProduct.quantity);
 
         return updatedProducts;
     } else {
