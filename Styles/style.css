@@ -41,3 +41,6 @@
 .not-available {
     color: red;
 }
+.cart-close-icon:hover {
+    cursor: pointer;
+} 
