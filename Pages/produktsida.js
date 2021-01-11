@@ -8,9 +8,11 @@ const PRODUCTS_QUERY = gql`query{
           ... on SimpleProduct {
             id
             name
+            description
             image {
               sourceUrl
-              description
+              srcSet
+              title
             }
             onSale
             purchasable

@@ -1,11 +1,11 @@
+import CartItemsContainer from "../Components/Cart/CartPage/CartItemsContainer";
 import Layout from "../Components/Layout";
 
 const Cart = () => {
     return (
         <Layout>
-            <div>Kundvagnssida</div>
+            <CartItemsContainer />
         </Layout>
     )
 };
-
 export default Cart;
