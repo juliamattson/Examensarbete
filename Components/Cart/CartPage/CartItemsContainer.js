@@ -28,11 +28,32 @@ const CartItemsContainer = () => {
                         <tbody>
                             {cart.products.length && (
                                 cart.products.map(item => (
-                                    <CartItem key={item.productId} item={item} setCart={setCart} />
+                                    <CartItem
+                                        key={item.productId}
+                                        item={item}
+                                        setCart={setCart}
+                                    />
                                 ))
                             )}
                         </tbody>
                     </table>
+                    <div className="row cart-total-container mt-5">
+                        <div className="col-6">
+                            <h5>Totalt: </h5>
+                            <table className="table">
+                                <tbody>
+                                    <tr className="table-light">
+                                        <td className="cart-element-total">Antal produkter:</td>
+                                        <td className="cart-element-total">{cart.totalProductsCount}</td>
+                                    </tr>
+                                    <tr className="table-light">
+                                        <td className="cart-element-total">Totalbelopp:</td>
+                                        <td className="cart-element-total">{cart.totalProductsPrice} kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             ) : ''}
         </div>
