@@ -32,3 +32,12 @@
     width: 50px;
     margin: 0;
 }
+.stock-status {
+    font-size: 10px;
+}
+.available {
+    color: green;
+}
+.not-available {
+    color: red;
+}
