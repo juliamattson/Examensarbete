@@ -27,7 +27,7 @@ const AddToCartButton = (props) => {
     };
     return (
         <React.Fragment>
-            <button onClick={handleAddToCartClick} className="btn btn-secondary">Lägg i kundvagn</button>
+            <button onClick={handleAddToCartClick} className="btn">Köp</button>
         </React.Fragment>
     )
 };

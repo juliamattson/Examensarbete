@@ -44,3 +44,41 @@
 .cart-close-icon:hover {
     cursor: pointer;
 } 
+.fa-minus-circle, .fa-plus-circle {
+    margin: 0 5px;
+}
+.fa-minus-circle:hover, .fa-plus-circle:hover {
+    cursor: pointer;
+}
+.btn {
+    background-color: black;
+    color: white;
+    max-width: 150px;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+.card {
+    font-family: 'Raleway', sans-serif;
+}
+.header {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+.product-price {
+    font-size: 15px;
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 90%;
+    }
+    .header {
+        font-size: 20px;
+    }
+    .product-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

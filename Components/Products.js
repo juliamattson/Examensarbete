@@ -2,17 +2,18 @@ import AddToCartButton from "./Cart/AddToCartButton";
 
 const Product = (props) => {
     const { product } = props;
+    console.log(product)
     return (
-        <div className="card border-secondary mb-3">
-            <h3 className="card-header">{product.name}</h3>
+        <div className="card mb-3">
             <img src={product.image.sourceUrl} alt="produkt bild" />
-            <div className="card-body">
-                <h5 className="card-title">{product.price}</h5>
+            <h3 className="header">{product.name}</h3>
+            <div className="product-body">
+                <p className="product-price">{product.price}</p>
                 <AddToCartButton product={product} />
-                {product.purchasable && (
+                {product.stockStatus == "IN_STOCK" && (
                     <p className="stock-status available"><i className="fa fa-circle mr-1"></i> Tillgänglig</p>
                 )}
-                {!product.purchasable && (
+                {product.stockStatus == "OUT_OF_STOCK" && (
                     <p className="stock-status not-available"><i className="fa fa-circle mr-1"></i> Ej tillgänglig</p>
                 )}
             </div>

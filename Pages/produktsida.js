@@ -15,8 +15,8 @@ const PRODUCTS_QUERY = gql`query{
               title
             }
             onSale
-            purchasable
             price
+            stockStatus
           }
         }
       }
