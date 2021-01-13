@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import CartItem from './CartItem';
+import Link from 'next/link';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
@@ -51,10 +52,19 @@ const CartItemsContainer = () => {
                                     </tr>
                                 </tbody>
                             </table>
+                            <Link href="/checkout">
+                                <button className="btn btn-secondary">Slutför köp</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
-            ) : ''}
+            ) : (
+                    <>
+                        <div className="empty-cart">
+                            <h2>Din kundvagn är tom..</h2>
+                        </div>
+                    </>
+                )}
         </div>
     )
 };
