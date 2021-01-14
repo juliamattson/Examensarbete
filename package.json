@@ -30,6 +30,7 @@
     "react": "^17.0.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1",
     "woocommerce-api": "^1.5.0"
   }
 }

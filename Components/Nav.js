@@ -1,16 +1,16 @@
 import Link from 'next/link';
+import Burger from './Burger';
 import CartIcon from './Cart/CartIcon';
+import Menu from './Menu';
+import React, { useState } from 'react';
 
 const Nav = () => {
+    const [open, setOpen] = useState(false);
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#"><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarColor03">
-                <ul className="navbar-nav mr-auto">
+        <nav className="navbar">
+            <a className="navbar-brand logo-one" href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
+            <div className="pages">
+                <ul className="nav-list">
                     <li className="nav-item active">
                         <Link href={"/omoss"}>
                             <a className="nav-link" >Hem
@@ -24,12 +24,16 @@ const Nav = () => {
                     <li className="nav-item">
                         <a className="nav-link" href={"/kontakt"}>Kontakt</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href={"/cart"}>Kundvagn</a>
-                    </li>
                 </ul>
+            </div>
+            <div className="cart-nav-icon">
                 <CartIcon />
             </div>
+            <div className="burger-menu">
+                <Burger open={open} setOpen={setOpen} />
+                <Menu open={open} setOpen={setOpen} />
+            </div>
+            <a className="navbar-brand logo-two" href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
         </nav>
     )
 };

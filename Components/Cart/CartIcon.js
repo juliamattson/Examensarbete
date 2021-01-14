@@ -15,7 +15,7 @@ const CartIcon = () => {
                     <div className="cart-wrapper">
                         <span className="cart-icon-container">
                             {productsCount ? <span className="cart-count">{productsCount}</span> : ''}
-                            <i className="fa fa-shopping-cart cart-icon" />
+                            <i className="fa fa-shopping-bag cart-icon" />
                         </span>
                     </div>
                 </a>

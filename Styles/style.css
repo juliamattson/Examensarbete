@@ -17,12 +17,20 @@
 }
 .cart-icon {
     font-size: 25px;
+    color: whitesmoke;
 }
 .cart-icon:hover {
-    color: rgba(2, 2, 2, 0.664);
+    font-weight: bold;
 }
 .cart-wrapper {
     color: black;
+}
+.cart-header {
+    font-family: 'Raleway', sans-serif;
+}
+.cart-icon-container {
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
 .cart-icon-link:hover {
     text-decoration: none;
@@ -74,6 +82,49 @@
     justify-content: center;
     font-family: 'Raleway', sans-serif;
 }
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 70px;
+}
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+.nav-link {
+    color: #ffffff;
+    padding-top: 30px;
+}
+.nav-link:hover {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cart-nav-icon {
+    justify-content: end;
+}
+.cart-count {
+    margin-right: 5px;
+    text-align: center;
+}
+.burger-menu {
+    display: none;
+}
+.navbar-brand {
+    margin: 0 0 30px 0;
+}
+.logo-two {
+    display: none;
+}
 
 @media (max-width: 800px) {
     .card {
@@ -84,6 +135,22 @@
     }
     .product-wrapper {
         flex-direction: column;
+        align-items: center;
+    }
+    .pages {
+        display: none;
+    }
+    .cart-nav-icon {
+        display:none;
+    }
+    .burger-menu {
+        display: flex;
+    }
+    .logo-one {
+        display: none;
+    }
+    .logo-two {
+        display: flex;
         align-items: center;
     }
 }

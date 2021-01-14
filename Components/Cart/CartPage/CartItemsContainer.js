@@ -39,7 +39,7 @@ const CartItemsContainer = () => {
                     </table>
                     <div className="row cart-total-container mt-5">
                         <div className="col-6">
-                            <h5>Totalt: </h5>
+                            <h5 className="cart-header">Totalt: </h5>
                             <table className="table">
                                 <tbody>
                                     <tr className="table-light">
