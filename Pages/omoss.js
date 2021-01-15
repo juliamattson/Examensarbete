@@ -4,9 +4,8 @@ import Layout from "../Components/Layout";
 
 const HOMEPAGE_QUERY = gql`query{
     page(id: "cG9zdDoxNw==") {
-        date
-        isFrontPage
         title
+        content
       }
     }
 `;
@@ -17,7 +16,7 @@ const OmOss = (props) => {
     return (
         <Layout>
             <h1>{page.title}</h1>
-            <p>{page.date}</p>
+            <p>{page.content}</p>
         </Layout>
     )
 };
