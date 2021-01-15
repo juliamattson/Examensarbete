@@ -6,11 +6,11 @@ import { bool, func } from 'prop-types';
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  background: ${theme.lightyellow};
+  background: ${theme.primaryLight};
   height: 100vh;
   width: 30vw;
-  text-align: right;
-  padding: 1rem 1rem 3rem 5rem;
+  text-align: left;
+  padding: 1rem 1rem 3rem 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -31,12 +31,15 @@ export const StyledMenu = styled.nav`
     
     @media (max-width: ${theme.mobile}) {
       font-size: 1.5rem;
-      text-align: center;
+      text-align: left;
     }
 
     &:hover {
       color: ${theme.primaryHover};
     }
+  }
+  h3 {
+    padding-top: 4rem;
   }
 `;
 

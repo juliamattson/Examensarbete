@@ -3,5 +3,4 @@ export const theme = {
     primaryLight: '#FFFFFF',
     primaryHover: '#343078',
     mobile: '576px',
-    lightyellow: '#ffecb5'
 }
