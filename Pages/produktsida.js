@@ -1,4 +1,5 @@
-import Layout from "../Components/Layout"; import client from '../Components/ApolloClient';
+import Layout from "../Components/Layout";
+import client from '../Components/ApolloClient';
 import Product from "../Components/Products";
 import gql from 'graphql-tag';
 
