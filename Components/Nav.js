@@ -26,14 +26,14 @@ const Nav = () => {
                     </li>
                 </ul>
             </div>
-            <div className="cart-nav-icon">
-                <CartIcon />
-            </div>
             <div className="burger-menu">
                 <Burger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
             </div>
             <a className="navbar-brand logo-two" href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
+            <div className="cart-nav-icon">
+                <CartIcon />
+            </div>
         </nav>
     )
 };

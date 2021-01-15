@@ -87,6 +87,7 @@
     flex-direction: row;
     background-color: black;
     height: 70px;
+    align-items: center;
 }
 .pages {
     display: flex;
@@ -102,7 +103,6 @@
 }
 .nav-link {
     color: #ffffff;
-    padding-top: 30px;
 }
 .nav-link:hover {
     color: #ffffff;
@@ -111,6 +111,7 @@
 }
 .cart-nav-icon {
     justify-content: end;
+    margin-bottom: 1.5rem;
 }
 .cart-count {
     margin-right: 5px;
@@ -126,6 +127,7 @@
     display: none;
 }
 
+
 @media (max-width: 800px) {
     .card {
         width: 90%;
@@ -140,9 +142,6 @@
     .pages {
         display: none;
     }
-    .cart-nav-icon {
-        display:none;
-    }
     .burger-menu {
         display: flex;
     }
@@ -150,7 +149,11 @@
         display: none;
     }
     .logo-two {
-        display: flex;
+        display: contents;
         align-items: center;
+    }
+    .cart-nav-icon {
+        justify-content: end;
+        margin-bottom: 0;
     }
 }
