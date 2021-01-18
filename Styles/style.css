@@ -2,6 +2,8 @@
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
     margin-top: 10px;
+    text-align: center;
+    padding: 50px;
 
 }
 
@@ -102,6 +104,7 @@
 .header {
     margin-top: 10px;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 .product-price {
