@@ -12,7 +12,7 @@ const Nav = () => {
             <div className="pages">
                 <ul className="nav-list">
                     <li className="nav-item active">
-                        <Link href={"/omoss"}>
+                        <Link href={"/index"}>
                             <a className="nav-link" >Hem
                             <span className="sr-only">(current)</span>
                             </a>

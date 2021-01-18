@@ -47,7 +47,7 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <h3>Hjärtan av guld UF</h3>
-      <a href={"/omoss"}>
+      <a href={"/index"}>
         Hem
       </a>
       <a href={"/produktsida"}>
