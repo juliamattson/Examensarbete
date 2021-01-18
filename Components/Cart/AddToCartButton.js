@@ -31,31 +31,39 @@ const AddToCartButton = (props) => {
             productId: product.id,
             image: product.image,
             name: product.name,
-            price: product.price,
+            price: parseFloat(product.price),
             quantity: 1,
         }
     };
 
     const addProductToCart = () => {
-        let productPrice = product.price
+        const existingCart = JSON.parse(localStorage.getItem('hjartanavguld'))
 
 
         if (process.browser) {
-            let existingCart = JSON.parse(localStorage.getItem('hjartanavguld'))
             if (existingCart) {
+
                 const newProduct = createNewProduct(product);
-                console.log(newProduct)
+                let productPrice = newProduct.price
                 existingCart.products.push(newProduct);
+                existingCart.totalProductsPrice.push(productPrice);
+                existingCart.totalProductsCount.push(1);
                 localStorage.setItem('hjartanavguld', JSON.stringify(existingCart));
                 return existingCart;
             } else {
-                let newCart = {
-                    products: []
+                let shoppingCart = {
+                    products: [],
+                    totalProductsPrice: [],
+                    totalProductsCount: [],
                 }
                 const newProduct = createNewProduct(product);
-                newCart.products.push(newProduct);
-                localStorage.setItem('hjartanavguld', JSON.stringify(newCart));
-                return newCart;
+                let productPrice = newProduct.price
+                shoppingCart.products.push(newProduct);
+                shoppingCart.totalProductsPrice.push(productPrice);
+                shoppingCart.totalProductsCount.push(1);
+                localStorage.setItem('hjartanavguld', JSON.stringify(shoppingCart));
+                return shoppingCart;
+
             }
         }
     }

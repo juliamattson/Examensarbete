@@ -1,15 +1,16 @@
-import { useContext } from 'react';
+import React from 'react';
+import { useState, useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import CartItem from './CartItem';
 import Link from 'next/link';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
-    console.log(cart)
     const removeProductClick = () => {
 
     };
 
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return (
         <div>
             {cart ? (
@@ -43,11 +44,11 @@ const CartItemsContainer = () => {
                                 <tbody>
                                     <tr className="table-light">
                                         <td className="cart-element-total">Antal produkter:</td>
-                                        <td className="cart-element-total">{cart.totalProductsCount}</td>
+                                        <td className="cart-element-total">{JSON.parse(cart.totalProductsCount.reduce(reducer))}</td>
                                     </tr>
                                     <tr className="table-light">
                                         <td className="cart-element-total">Totalbelopp:</td>
-                                        <td className="cart-element-total">{cart.totalProductsPrice} kr</td>
+                                        <td className="cart-element-total">{cart.totalProductsPrice.reduce(reducer)} kr</td>
                                     </tr>
                                 </tbody>
                             </table>
