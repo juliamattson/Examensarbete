@@ -12,11 +12,11 @@ const INDEX_QUERY = gql`query{
 
 const Index = (props) => {
     const { page } = props;
-    console.log(page)
+
     return (
         <Layout>
             <h1>{page.title}</h1>
-            <p>{page.content}</p>
+            <div dangerouslySetInnerHTML={{ __html: page.content }} />
         </Layout>
     )
 };
