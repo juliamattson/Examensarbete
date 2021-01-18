@@ -15,7 +15,7 @@ const Kontakt = (props) => {
     return (
         <Layout>
             <h1 className="header">{page.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: page.content }} />
+            <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
         </Layout>
     )
 };

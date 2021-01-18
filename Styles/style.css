@@ -1,95 +1,128 @@
+.text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+
+}
+
 .product-wrapper {
     display: flex;
     justify-content: center;
 }
+
 .card {
     display: flex;
     text-align: center;
     margin: 1.5rem;
     width: 50%;
 }
+
 .card img {
     max-width: 100%;
 }
+
 .card .btn {
     width: 60%;
     margin: 0 auto 1rem;
 }
+
 .cart-icon {
     font-size: 25px;
     color: whitesmoke;
 }
+
 .cart-icon:hover {
     font-weight: bold;
 }
+
 .cart-wrapper {
     color: black;
 }
+
 .cart-header {
     font-family: 'Raleway', sans-serif;
 }
+
 .cart-icon-container {
     color: white;
     font-family: 'Raleway', sans-serif;
 }
+
 .cart-icon-link:hover {
     text-decoration: none;
 }
+
 .logo-image {
     height: 50px;
     width: 50px;
     margin: 0;
 }
+
 .stock-status {
     font-size: 10px;
 }
+
 .available {
     color: green;
 }
+
 .not-available {
     color: red;
 }
+
 .cart-close-icon:hover {
     cursor: pointer;
-} 
-.fa-minus-circle, .fa-plus-circle {
+}
+
+.fa-minus-circle,
+.fa-plus-circle {
     margin: 0 5px;
 }
-.fa-minus-circle:hover, .fa-plus-circle:hover {
+
+.fa-minus-circle:hover,
+.fa-plus-circle:hover {
     cursor: pointer;
 }
+
 .btn {
     background-color: black;
     color: white;
     max-width: 150px;
 }
+
 .btn:hover {
     background-color: black;
     color: white;
 }
+
 .card {
     font-family: 'Raleway', sans-serif;
 }
+
 .header {
     margin-top: 10px;
     font-family: 'Raleway', sans-serif;
 }
+
 .product-price {
     font-size: 15px;
 }
+
 .empty-cart {
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
     margin-top: 1rem;
 }
+
 .navbar {
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: #202020;
     height: 70px;
     align-items: center;
 }
+
 .pages {
     display: flex;
     align-items: center;
@@ -97,33 +130,41 @@
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
+
 .nav-list {
     display: flex;
     list-style-type: none;
     padding: 0;
 }
+
 .nav-link {
     color: #ffffff;
 }
+
 .nav-link:hover {
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
 }
+
 .cart-nav-icon {
     justify-content: end;
     margin-bottom: 1.5rem;
 }
+
 .cart-count {
     margin-right: 5px;
     text-align: center;
 }
+
 .burger-menu {
     display: none;
 }
+
 .navbar-brand {
     margin: 0 0 30px 0;
 }
+
 .logo-two {
     display: none;
 }
@@ -133,28 +174,37 @@
     .card {
         width: 90%;
     }
+
     .header {
         font-size: 20px;
     }
+
     .product-wrapper {
         flex-direction: column;
         align-items: center;
     }
+
     .pages {
         display: none;
     }
+
     .burger-menu {
         display: flex;
     }
+
     .logo-one {
         display: none;
     }
+
     .logo-two {
         display: contents;
         align-items: center;
     }
+
     .cart-nav-icon {
         justify-content: end;
         margin-bottom: 0;
     }
+
+
 }
