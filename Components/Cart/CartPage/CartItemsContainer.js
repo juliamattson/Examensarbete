@@ -22,7 +22,6 @@ const CartItemsContainer = () => {
                                 <th className="cart-heading" scope="col" />
                                 <th className="cart-heading" scope="col">Produkt</th>
                                 <th className="cart-heading" scope="col">Pris/st</th>
-                                <th className="cart-heading" scope="col">Antal</th>
                             </tr>
                         </thead>
                         <tbody>

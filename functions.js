@@ -1,4 +1,4 @@
-export const getFloatValue = (string) => {
+/* export const getFloatValue = (string) => {
     let floatValue = string.match(/[+-]?\d+(\.\d+)?/g)[0];
     console.log(floatValue)
     return (null !== floatValue) ? parseFloat(parseFloat(floatValue).toFixed(2)) : '';
@@ -76,4 +76,4 @@ export const isProductInCart = (existingProductsInCart, productId) => {
     };
     const newArray = existingProductsInCart.filter(returnItemThatExists);
     return existingProductsInCart.indexOf(newArray[0]);
-};  
+};   */
