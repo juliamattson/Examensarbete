@@ -8,23 +8,9 @@ const AddToCartButton = (props) => {
     const { product } = props;
     const [cart, setCart] = useContext(AppContext);
 
-    // Function on what will happen once the add to cart button is clicked 
-    /*  const handleAddToCartClick = () => {
-         if (process.browser) {
-             let existingCart = localStorage.getItem('hjartanavguld');
-             // checks if cart has items already and if so, updates the existing 
-             if (existingCart) {
-                 existingCart = JSON.parse(existingCart);
-                 const quantityAdded = 1;
-                 const updatedCart = updateCart(existingCart, product, quantityAdded);
-                 setCart(updatedCart);
-             } else {
-                 // Add first product to cart
-                 const newCart = addFirstProduct(product);
-                 setCart(newCart);
-             }
-         }
-     }; */
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     const createNewProduct = (product) => {
         return {
@@ -49,6 +35,7 @@ const AddToCartButton = (props) => {
                 existingCart.totalProductsPrice.push(productPrice);
                 existingCart.totalProductsCount.push(1);
                 localStorage.setItem('hjartanavguld', JSON.stringify(existingCart));
+                refreshPage()
                 return existingCart;
             } else {
                 let shoppingCart = {
@@ -62,8 +49,8 @@ const AddToCartButton = (props) => {
                 shoppingCart.totalProductsPrice.push(productPrice);
                 shoppingCart.totalProductsCount.push(1);
                 localStorage.setItem('hjartanavguld', JSON.stringify(shoppingCart));
+                refreshPage()
                 return shoppingCart;
-
             }
         }
     }
