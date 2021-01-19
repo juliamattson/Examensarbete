@@ -5,9 +5,9 @@ const WooConfig = require('./Wooconfig.js');
 const WooCommerceAPI = require('woocommerce-api');
 
 const WooCommerce = new WooCommerceAPI({
-    url: WooConfig.siteUrl,
-    consumerKey: WooConfig.consumerKey,
-    consumerSecret: WooConfig.consumerSecret,
+    url: 'https://wp.hjartanavguld.se/',
+    consumerKey: 'ck_f2d6721af3cf16085efa560c43d8bfeb6f2b3ff2',
+    consumerSecret: 'cs_d1fc0178935d5ecb830258498d24a0e446dde8c0',
     wpAPI: true,
     version: 'wc/v1'
 });
