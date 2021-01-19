@@ -4,23 +4,15 @@ import { updateCart } from '../../../functions';
 const CartItem = ({ item, setCart }) => {
     const [productCount, setProductCount] = useState(item.quantity);
 
-    /*  const handleQtyChange = (event) => {
-         if (process.browser) {
-             const newQty = event.target.value;
-             setProductCount(newQty);
- 
-             let existingCart = JSON.parse(localStorage.getItem('hjartanavguld'));
- 
-             const newCart = updateCart(existingCart, item, false, newQty)
-             console.log(newCart)
-             setCart(newCart)
-         }
-     }; */
+    const removeProductClick = (item) => {
+        console.log(item.productId)
+
+    };
 
     return (
         <tr className="cart-item" key={item.productId}>
             <th className="cart-element cart-element-close">
-                <span className="cart-close-icon" onClick={(event) => removeProductClick()}>
+                <span className="cart-close-icon" onClick={(event) => removeProductClick(item)}>
                     <i className="fa fa-times-circle"></i>
                 </span>
             </th>

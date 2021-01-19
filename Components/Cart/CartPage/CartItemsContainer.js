@@ -74,7 +74,7 @@ const CartItemsContainer = () => {
                             <table className="table">
                                 <tbody>
                                     <tr className="table-light">
-                                        <td className="cart-element-payment"><input type="radio" checked="checked" /> Swish</td>
+                                        <td className="cart-element-payment"><input type="radio" defaultChecked /> Swish</td>
                                         <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp</td>
                                         <td className="cart-element-payment">+ 00,00 SEK</td>
                                     </tr>
