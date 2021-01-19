@@ -1,6 +1,6 @@
 const next = require('next');
 const express = require('express');
-const WooConfig = require('./Wooconfig');
+const WooConfig = require('./Wooconfig.js');
 
 const WooCommerceAPI = require('woocommerce-api');
 
