@@ -37,6 +37,7 @@ const CartItemsContainer = () => {
                             )}
                         </tbody>
                     </table>
+                    <hr />
                     <div className="row cart-total-container mt-5">
                         <div className="col-6">
                             <h5 className="cart-header">Totalt: </h5>
@@ -49,6 +50,33 @@ const CartItemsContainer = () => {
                                     <tr className="table-light">
                                         <td className="cart-element-total">Totalbelopp:</td>
                                         <td className="cart-element-total">{cart.totalProductsPrice.reduce(reducer)} kr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr />
+                            <h5 className="cart-header">Fraktsätt: </h5>
+                            <table className="table">
+                                <tbody>
+                                    <tr className="table-light">
+                                        <td className="cart-element-shippingmethod"><input type="radio" name="shipping-method" /> Hämtas upp</td>
+                                        <td className="cart-element-shippingmethod">Hämtas upp hos oss</td>
+                                        <td className="cart-element-shippingmethod">+ 00,00 SEK</td>
+                                    </tr>
+                                    <tr className="table-light">
+                                        <td className="cart-element-shippingmethod"><input type="radio" name="shipping-method" /> Postnord</td>
+                                        <td className="cart-element-shippingmethod">Skickas med Postnord</td>
+                                        <td className="cart-element-shippingmethod">+ 29,00 SEK</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr />
+                            <h5 className="cart-header">Betalsätt: </h5>
+                            <table className="table">
+                                <tbody>
+                                    <tr className="table-light">
+                                        <td className="cart-element-payment"><input type="radio" checked="checked" /> Swish</td>
+                                        <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp</td>
+                                        <td className="cart-element-payment">+ 00,00 SEK</td>
                                     </tr>
                                 </tbody>
                             </table>

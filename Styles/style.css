@@ -88,6 +88,7 @@
     background-color: black;
     color: white;
     max-width: 150px;
+    margin-bottom: 1rem;
 }
 
 .btn:hover {
