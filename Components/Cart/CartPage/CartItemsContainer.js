@@ -3,10 +3,15 @@ import { useState, useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import CartItem from './CartItem';
 import Link from 'next/link';
+import { removeItemFromCart } from '../../../functions';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
-    const removeProductClick = () => {
+    const removeProductClick = (event, productId) => {
+
+        const updatedCart = removeItemFromCart(productId)
+
+        setCart(updatedCart);
 
     };
 
@@ -31,6 +36,7 @@ const CartItemsContainer = () => {
                                     <CartItem
                                         key={item.productId}
                                         item={item}
+                                        removeProductClick={removeProductClick}
                                         setCart={setCart}
                                     />
                                 ))

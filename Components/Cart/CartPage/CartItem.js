@@ -1,18 +1,13 @@
 import { useState } from 'react';
 import { updateCart } from '../../../functions';
 
-const CartItem = ({ item, setCart }) => {
+const CartItem = ({ item, setCart, removeProductClick }) => {
     const [productCount, setProductCount] = useState(item.quantity);
-
-    const removeProductClick = (item) => {
-        console.log(item.productId)
-
-    };
 
     return (
         <tr className="cart-item" key={item.productId}>
             <th className="cart-element cart-element-close">
-                <span className="cart-close-icon" onClick={(event) => removeProductClick(item)}>
+                <span className="cart-close-icon" onClick={(event) => removeProductClick(event, item.productId)}>
                     <i className="fa fa-times-circle"></i>
                 </span>
             </th>

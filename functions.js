@@ -58,3 +58,50 @@ export const getUpdatedProducts = (existingProductsInCart, product, qtyToBeAdded
     existingProductsInCart.push(newProduct);
     return existingProductsInCart;
 };
+
+const isProductInCart = (existingProductsInCart, productId) => {
+
+    const returnItemThatExists = (item, index) => {
+        if (productId === item.productId) {
+            return item;
+        }
+    }
+
+    const newArray = existingProductsInCart.filter(returnItemThatExists)
+
+    return existingProductsInCart.indexOf(newArray[0])
+
+};
+
+export const removeItemFromCart = (productId) => {
+
+    let existingCart = JSON.parse(localStorage.getItem('hjartanavguld'))
+
+    // if there is only one item in the cart, delete the whole cart
+    if (1 === existingCart.products.length) {
+        localStorage.removeItem('hjartanavguld')
+        return null;
+    }
+
+    const productExistsIndex = isProductInCart(existingCart.products, productId)
+
+    if (-1 < productExistsIndex) {
+        const productToBeRemoved = existingCart.products[productExistsIndex]
+        const qtyToBeRemovedFromTotal = productToBeRemoved.qty;
+        const priceToBeRemovedFromTotal = productToBeRemoved.price;
+
+        // remove this product from array and also update totalprice and total quantity
+        let updatedCart = existingCart;
+        updatedCart.products.splice(productExistsIndex, 1);
+        updatedCart.totalProductsCount = updatedCart.totalProductsCount - qtyToBeRemovedFromTotal;
+        updatedCart.totalProductsPrice = updatedCart.totalProductsPrice - priceToBeRemovedFromTotal;
+
+        localStorage.setItem('hjartanavguld', JSON.stringify(updatedCart))
+
+        return updatedCart;
+
+    } else {
+        return existingCart;
+    }
+
+};
