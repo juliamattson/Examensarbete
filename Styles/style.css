@@ -3,8 +3,28 @@
     font-size: 25px;
     margin-top: 10px;
     text-align: center;
-    padding: 50px;
+}
 
+input {
+    width: 100%;
+    padding: 0 5;
+}
+
+textarea {
+    width: 100%;
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+
+}
+
+/* knappen på kontakt */
+.wpcf7-submit {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    max-width: 150px;
 }
 
 .product-wrapper {
@@ -175,6 +195,13 @@
 
 
 @media (max-width: 800px) {
+    .text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
     .card {
         width: 90%;
     }
