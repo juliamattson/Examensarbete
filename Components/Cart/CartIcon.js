@@ -5,8 +5,7 @@ import Link from 'next/link';
 const CartIcon = () => {
 
     const [cart, setCart] = useContext(AppContext);
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const productsCount = (null !== cart && Object.keys(cart).length) ? cart.totalProductsCount.length : '';
+    const productsCount = (null !== cart && Object.keys(cart).length) ? cart.totalProductsCount : '';
 
     return (
         <>

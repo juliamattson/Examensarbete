@@ -1,12 +1,11 @@
-/* export const getFloatValue = (string) => {
+export const getFloatVal = (string) => {
     let floatValue = string.match(/[+-]?\d+(\.\d+)?/g)[0];
-    console.log(floatValue)
     return (null !== floatValue) ? parseFloat(parseFloat(floatValue).toFixed(2)) : '';
 }
 
 export const addFirstProduct = (product) => {
-    let productPrice = getFloatValue(product.price)
-    // Create empty array
+    let productPrice = getFloatVal(product.price)
+    console.log(productPrice)
     let newCart = {
         products: [],
         totalProductsCount: 1,
@@ -20,29 +19,31 @@ export const addFirstProduct = (product) => {
     return newCart;
 };
 
-// Create a new product object
-export const createNewProduct = (product, productPrice, quantity) => {
+export const createNewProduct = (product, productPrice, qty) => {
     return {
         productId: product.id,
         image: product.image,
         name: product.name,
         price: productPrice,
-        quantity: quantity,
-        totalPrice: parseFloat((productPrice * quantity)),
+        qty: qty,
     }
 };
 
-export const updateCart = (existingCart, product, quantityAdded, newQuantity = false) => {
-    const updatedProducts = getUpdatedProducts(existingCart.products, product, quantityAdded, newQuantity);
+export const updateCart = (existingCart, product, qtyToBeAdded) => {
+
+    const updatedProducts = getUpdatedProducts(existingCart.products, product, qtyToBeAdded);
+
     const addPrice = (total, item) => {
-        total.totalPrice += item.totalPrice;
-        total.quantity += item.quantity;
+        total.totalPrice += item.price;
+        total.qty += item.qty;
         return total;
     }
-    let total = updatedProducts.reduce(addPrice, { totalPrice: 0, quantity: 0 });
+
+    let total = updatedProducts.reduce(addPrice, { totalPrice: 0, qty: 0 });
+
     const updatedCart = {
         products: updatedProducts,
-        totalProductsCount: parseInt(total.quantity),
+        totalProductsCount: parseInt(total.qty),
         totalProductsPrice: parseFloat(total.totalPrice),
     }
     localStorage.setItem('hjartanavguld', JSON.stringify(updatedCart));
@@ -50,30 +51,10 @@ export const updateCart = (existingCart, product, quantityAdded, newQuantity = f
     return updatedCart;
 };
 
-export const getUpdatedProducts = (existingProductsInCart, product, quantityAdded, newQuantity = false) => {
-    const existingProductIndex = isProductInCart(existingProductsInCart, product.id);
-    if (-1 < existingProductIndex) {
-        let updatedProducts = existingProductsInCart;
-        let updatedProduct = updatedProducts[existingProductIndex];
+export const getUpdatedProducts = (existingProductsInCart, product, qtyToBeAdded) => {
 
-        updatedProduct.quantity = (newQuantity) ? parseInt(newQuantity) : parseInt(updatedProduct.quantity + quantityAdded);
-        updatedProduct.totalPrice = parseFloat(updatedProduct.price * updatedProduct.quantity);
-
-        return updatedProducts;
-    } else {
-        let productPrice = getFloatValue(product.price);
-        const newProduct = createNewProduct(product, productPrice, quantityAdded);
-        existingProductsInCart.push(newProduct);
-        return existingProductsInCart;
-    }
+    let productPrice = getFloatVal(product.price);
+    const newProduct = createNewProduct(product, productPrice, qtyToBeAdded);
+    existingProductsInCart.push(newProduct);
+    return existingProductsInCart;
 };
-
-export const isProductInCart = (existingProductsInCart, productId) => {
-    const returnItemThatExists = (item, index) => {
-        if (productId === item.productId) {
-            return item;
-        }
-    };
-    const newArray = existingProductsInCart.filter(returnItemThatExists);
-    return existingProductsInCart.indexOf(newArray[0]);
-};   */

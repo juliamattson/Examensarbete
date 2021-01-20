@@ -45,11 +45,11 @@ const CartItemsContainer = () => {
                                 <tbody>
                                     <tr className="table-light">
                                         <td className="cart-element-total">Antal produkter:</td>
-                                        <td className="cart-element-total">{JSON.parse(cart.totalProductsCount.reduce(reducer))}</td>
+                                        <td className="cart-element-total">{cart.totalProductsCount}</td>
                                     </tr>
                                     <tr className="table-light">
                                         <td className="cart-element-total">Totalbelopp:</td>
-                                        <td className="cart-element-total">{cart.totalProductsPrice.reduce(reducer)} kr</td>
+                                        <td className="cart-element-total">{cart.totalProductsPrice} kr</td>
                                     </tr>
                                 </tbody>
                             </table>

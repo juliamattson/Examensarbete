@@ -2,7 +2,6 @@ import AddToCartButton from "./Cart/AddToCartButton";
 
 const Product = (props) => {
     const { product } = props;
-    console.log(product)
     return (
         <div className="card mb-3">
             <img src={product.image.sourceUrl} alt="produkt bild" />
