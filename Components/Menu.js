@@ -2,64 +2,94 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../theme';
 import { bool, func } from 'prop-types';
+import CartIcon from './Cart/CartIcon';
+import Link from 'next/link';
 
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.ul`
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  background: ${theme.primaryLight};
-  height: 100vh;
-  width: 30vw;
-  text-align: left;
-  padding: 1rem 1rem 3rem 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
+  flew-flow: row nowrap;
+  text-align: right;
   font-family: 'Raleway', sans-serif;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  
-  @media (max-width: ${theme.mobile}) {
-    width: 100%;
+  margin: auto 0;
+
+  .company-name {
+    display: none;
+  }
+
+  li {
+    padding: 10px 20px;
+    position: relative;
   }
 
   a {
-    font-size: 20px;
-    color: ${theme.primaryDark};
     text-decoration: none;
-    transition: color 0.3s linear;
-    
-    @media (max-width: ${theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: left;
-    }
-
-    &:hover {
-      color: ${theme.primaryHover};
-    }
+    color: #FFFFFF;
+    position: relative;
   }
-  h3 {
-    padding-top: 4rem;
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    right: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: #000000;
+    transition: width 0.4s ease 0s, left 0.4s ease 0s;
+    width: 0;
+}
+  a:hover:after { 
+    width: 100%; 
+  }
+
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    background-color: #FFFFFF;
+    position: fixed;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+
+   a {
+      color: #000000;
+    }
+    .company-name {
+      display: flex;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      padding-top: 3rem;
+    }
   }
 `;
 
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}>
-      <h3>Hjärtan av guld UF</h3>
-      <a href={"/index"}>
-        Hem
-      </a>
-      <a href={"/produktsida"}>
-        Produkter
-      </a>
-      <a href={"/kontakt"}>
-        Kontakt
-      </a>
-    </StyledMenu>
+    <>
+      <StyledMenu open={open}>
+        <li>
+          <div className="company-name">Hjärtan av guld UF</div>
+        </li>
+        <li>
+          <Link href={"/index"}>
+            <a>Hem</a>
+          </Link>
+        </li>
+        <li>
+          <a href={"/produktsida"}>Produkter</a>
+        </li>
+        <li>
+          <a href={"/kontakt"}>Kontakt</a>
+        </li>
+        <li>
+          <CartIcon />
+        </li>
+      </StyledMenu>
+    </>
   )
-}
-Menu.propTypes = {
-  open: bool.isRequired,
 }
 export default Menu;

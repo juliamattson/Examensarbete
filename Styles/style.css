@@ -67,7 +67,6 @@ label {
 
 .cart-icon-container {
     color: white;
-    font-family: 'Raleway', sans-serif;
 }
 
 .cart-icon-link:hover {
@@ -213,7 +212,7 @@ label {
     height: 60px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .text {
         font-family: 'Raleway', sans-serif;
         font-size: 15px;
@@ -259,6 +258,10 @@ label {
         justify-content: end;
         margin-bottom: 0;
     }
-
-
+    .cart-icon {
+        color: #000000;
+    }
+    .cart-count {
+        color: #000000;
+    }
 }
