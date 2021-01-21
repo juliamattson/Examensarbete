@@ -44,53 +44,51 @@ const CartItemsContainer = () => {
                         </tbody>
                     </table>
                     <hr />
-                    <div className="row cart-total-container mt-5">
-                        <div className="col-6">
-                            <h5 className="cart-header">Totalt: </h5>
-                            <table className="table">
-                                <tbody>
-                                    <tr className="table-light">
-                                        <td className="cart-element-total">Antal produkter:</td>
-                                        <td className="cart-element-total">{cart.totalProductsCount}</td>
-                                    </tr>
-                                    <tr className="table-light">
-                                        <td className="cart-element-total">Totalbelopp:</td>
-                                        <td className="cart-element-total">{cart.totalProductsPrice} kr</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <h5 className="cart-header">Totalt: </h5>
+                    <table className="table">
+                        <tbody>
+                            <tr className="table-light">
+                                <td className="cart-element-total">Antal produkter:</td>
+                                <td className="cart-element-total">{cart.totalProductsCount}</td>
+                            </tr>
+                            <tr className="table-light">
+                                <td className="cart-element-total">Totalbelopp:</td>
+                                <td className="cart-element-total">{cart.totalProductsPrice} kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <h5 className="cart-header">Fraktsätt: </h5>
+                    <table className="table">
+                        <tbody>
+                            <tr className="table-light delivery-method-small">
+                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="pickup" />  Hämta</td>
+                                <td className="cart-element-shippingmethod-2">Hämta upp varorna hos oss enligt överenskommelse.</td>
+                                <td className="cart-element-shippingmethod-3">+ 00,00 SEK</td>
+                            </tr>
                             <hr />
-                            <h5 className="cart-header">Fraktsätt: </h5>
-                            <table className="table">
-                                <tbody>
-                                    <tr className="table-light">
-                                        <td className="cart-element-shippingmethod"><input type="radio" name="shipping-method" /> Hämtas upp</td>
-                                        <td className="cart-element-shippingmethod">Hämtas upp hos oss</td>
-                                        <td className="cart-element-shippingmethod">+ 00,00 SEK</td>
-                                    </tr>
-                                    <tr className="table-light">
-                                        <td className="cart-element-shippingmethod"><input type="radio" name="shipping-method" /> Postnord</td>
-                                        <td className="cart-element-shippingmethod">Skickas med Postnord</td>
-                                        <td className="cart-element-shippingmethod">+ 29,00 SEK</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <hr />
-                            <h5 className="cart-header">Betalsätt: </h5>
-                            <table className="table">
-                                <tbody>
-                                    <tr className="table-light">
-                                        <td className="cart-element-payment"><input type="radio" defaultChecked /> Swish</td>
-                                        <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp</td>
-                                        <td className="cart-element-payment">+ 00,00 SEK</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <Link href="/checkout">
-                                <button className="btn btn-secondary">Slutför köp</button>
-                            </Link>
-                        </div>
-                    </div>
+                            <tr className="table-light delivery-method-small">
+                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="postnord" /> Postnord</td>
+                                <td className="cart-element-shippingmethod-2">Vi skickar med Postnord efter erhållen betalning via Swish, fraktavgift tillkommer.</td>
+                                <td className="cart-element-shippingmethod-3">+ 29,00 SEK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <h5 className="cart-header">Betalsätt: </h5>
+                    <table className="table">
+                        <tbody>
+                            <tr className="table-light delivery-method-small">
+                                <td className="cart-element-payment-input"><input type="radio" defaultChecked /><img className="swish-icon" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/Swish_payment-Logo.wine_.png" /></td>
+                                <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp</td>
+                                <td className="cart-element-payment">+ 00,00 SEK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <Link href="/checkout">
+                        <button className="btn btn-secondary">Slutför köp</button>
+                    </Link>
+
                 </div>
             ) : (
                     <>
@@ -98,8 +96,9 @@ const CartItemsContainer = () => {
                             <h2>Din kundvagn är tom..</h2>
                         </div>
                     </>
-                )}
-        </div>
+                )
+            }
+        </div >
     )
 };
 

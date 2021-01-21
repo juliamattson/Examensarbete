@@ -192,7 +192,26 @@ label {
 .logo-two {
     display: none;
 }
-
+.cart-element-shippingmethod-input{
+    display: inline-flex;
+    align-items: center;
+    width: 120px;
+}
+.cart-element-shippingmethod-input p {
+    padding: 5px;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.cart-element-payment-input{
+    display: inline-flex;
+    align-items: center;
+    width: 120px;
+}
+.swish-icon {
+    width: 79px;
+    height: 60px;
+}
 
 @media (max-width: 800px) {
     .text {
@@ -201,7 +220,11 @@ label {
         margin-top: 10px;
         text-align: center;
     }
-
+    .delivery-method-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .card {
         width: 90%;
     }
