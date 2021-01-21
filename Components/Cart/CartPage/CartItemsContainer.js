@@ -25,9 +25,9 @@ const CartItemsContainer = () => {
                         <thead>
                             <tr className="header-container">
                                 <th className="cart-heading" scope="col" />
-                                <th className="cart-heading" scope="col" />
                                 <th className="cart-heading" scope="col">Produkt</th>
                                 <th className="cart-heading" scope="col">Pris/st</th>
+                                <th className="cart-heading" scope="col" />
                             </tr>
                         </thead>
                         <tbody>
