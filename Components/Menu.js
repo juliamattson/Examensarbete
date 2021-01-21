@@ -30,13 +30,12 @@ export const StyledMenu = styled.ul`
   a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
-    right: 0;
     content: "";
     display: block;
-    height: 2px;
+    height: 1px;
     position: absolute;
-    background: #000000;
-    transition: width 0.4s ease 0s, left 0.4s ease 0s;
+    background: #FFFFFF;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
   a:hover:after { 
