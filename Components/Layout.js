@@ -9,6 +9,7 @@ const Layout = (props) => {
             <div>
                 <Head>
                     <title>Hjärtan av guld UF</title>
+
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
                     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
                     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"></link>

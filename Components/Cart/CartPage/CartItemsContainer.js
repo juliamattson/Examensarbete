@@ -5,9 +5,12 @@ import CartItem from './CartItem';
 import Link from 'next/link';
 import { removeItemFromCart } from '../../../functions';
 import Checkout from '../../../pages/checkout';
+import { useForm } from "react-hook-form";
+import ContactUs from '../../../pages/checkout';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
+    console.log(cart)
     const removeProductClick = (event, productId) => {
 
         const updatedCart = removeItemFromCart(productId)
@@ -97,7 +100,7 @@ const CartItemsContainer = () => {
                         </tbody>
                     </table>
                     <hr />
-                    <Checkout />
+                    <ContactUs />
                     <hr />
                     <Link href="/checkout">
                         <button className="btn btn-secondary mt-2">Slutför köp</button>

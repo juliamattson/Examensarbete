@@ -22,6 +22,7 @@
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-link-http": "^1.5.17",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
@@ -31,6 +32,7 @@
     "react": "^17.0.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.14.2",
     "styled-components": "^5.2.1",
     "woocommerce-api": "^1.5.0"
   },

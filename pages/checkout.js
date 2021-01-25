@@ -1,54 +1,50 @@
-import Layout from "../Components/Layout";
-import styled from 'styled-components';
-import Link from 'next/link';
+import React from 'react';
+import { useState, useContext } from 'react';
+import { AppContext } from '../Components/Context/AppContext';
+import emailjs from 'emailjs-com';
 
-const CheckoutWrapper = styled.div`
-    .checkout-container {
-        width: 70%;
-        font-family: 'Raleway', sans-serif;
-    }
-    p {
-        margin: 0;
-        font-size: 16px;
-    }
-    h5 {
-       font-family: 'Raleway', sans-serif;
-    }
-    input {
-        height: 25px;
-        width: 50%;
-    }
-    @media (max-width: 768px) {
-        input {
-            width: 100%;
-        }
-    }
-`;
+export default function ContactUs() {
+    const [cart, setCart] = useContext(AppContext);
+    console.log(cart)
 
-const Checkout = () => {
+    const existingProducts = () => {
+        cart.products.forEach(product => {
+            <p>{product.name}</p>
+
+        });
+    }
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_hjartanavguld', 'template_7mka56c', e.target, 'user_2SgCEPJav3CQFGRwj9Wrz')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+
     return (
-        <CheckoutWrapper>
-            <div className="checkout-container">
-                <h5>Kunduppgifter</h5>
-                <p>Personnummer:</p>
-                <input type="text" id="personnummer" placeholder="ÅÅMMDDNNNN" required />
-                <p>Förnamn:</p>
-                <input type="text" id="fornamn" required />
-                <p>Efternamn:</p>
-                <input type="text" id="efternamn" required />
-                <p>Epost:</p>
-                <input type="text" id="epost" required />
-                <p>Telefon:</p>
-                <input type="text" id="telefon" required />
-                <p>Adress:</p>
-                <input type="text" id="adress" required />
-                <p>Postnummer:</p>
-                <input type="text" id="postnummer" required />
-                <p>Postort:</p>
-                <input type="text" id="postort" required />
-            </div>
-        </CheckoutWrapper>
-    )
-};
-
-export default Checkout;
+        <form className="contact-form" onSubmit={sendEmail}>
+            <input type="hidden" name="contact_number" />
+            <label>Namn:</label>
+            <input type="text" name="user_name" />
+            <label>Personnummer:</label>
+            <input type="text" name="personnummer" />
+            <label>Epost:</label>
+            <input type="email" name="user_email" />
+            <label>Telefon:</label>
+            <input type="email" name="user_phone" />
+            <label>Adress:</label>
+            <input type="email" name="user_adress" />
+            <label>Postnummer:</label>
+            <input type="email" name="postnummer" />
+            <label>Postort:</label>
+            <input type="email" name="postort" />
+            <label>Produkter</label>
+            <textarea name="products" readOnly value={"Totalbelopp:" + cart.totalProductsPrice + "kr<br />" + "Antal produkter:" + cart.totalProductsCount} />
+            <input type="submit" value="Send" />
+        </form>
+    );
+}
