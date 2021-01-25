@@ -4,6 +4,7 @@ import { AppContext } from '../../Context/AppContext';
 import CartItem from './CartItem';
 import Link from 'next/link';
 import { removeItemFromCart } from '../../../functions';
+import Checkout from '../../../pages/checkout';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
@@ -85,8 +86,21 @@ const CartItemsContainer = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <hr />
+                    <h5 className="cart-header">Sammanfattning: </h5>
+                    <table className="table">
+                        <tbody>
+                            <tr className="table-light">
+                                <td className="cart-element-total">Totalsumma (inkl frakt):</td>
+                                <td className="cart-element-total">{cart.totalProductsCount}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <Checkout />
+                    <hr />
                     <Link href="/checkout">
-                        <button className="btn btn-secondary">Slutför köp</button>
+                        <button className="btn btn-secondary mt-2">Slutför köp</button>
                     </Link>
 
                 </div>
