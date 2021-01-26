@@ -68,7 +68,6 @@ label {
 .cart-icon-container {
     color: white;
 }
-
 .cart-icon-link:hover {
     text-decoration: none;
 }
@@ -145,15 +144,6 @@ label {
     height: 70px;
     align-items: center;
 }
-
-.pages {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-}
-
 .nav-list {
     display: flex;
     list-style-type: none;
@@ -257,8 +247,17 @@ label {
     display: none;
     font-size: 28px;
   }
+  .pages {
+    margin-top: 10px;
+}
+.cart-icon-link {
+    margin-top: 10px;
+}
 
 @media (max-width: 768px) {
+    .cart-icon-link {
+        margin-top: 0;
+    }
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
         float: right;
@@ -298,6 +297,6 @@ label {
         align-items: center;
     }
     .pages {
-        display: none;
+        margin-top: 0;
     }
 }
