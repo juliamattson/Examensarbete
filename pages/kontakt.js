@@ -1,6 +1,7 @@
 import gql from "graphql-tag";
 import client from '../Components/ApolloClient';
 import Layout from "../Components/Layout";
+import Contact from "../Components/Contact";
 
 const CONTACT_QUERY = gql`query{
     page(id:"cG9zdDoyMA==") {
@@ -16,6 +17,7 @@ const Kontakt = (props) => {
         <Layout>
             <h1 className="header">{page.title}</h1>
             <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+            <Contact />
         </Layout>
     )
 };
