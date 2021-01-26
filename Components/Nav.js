@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CartIcon from './Cart/CartIcon';
+import { Squash as Hamburger } from 'hamburger-react';
 
 const Nav = () => {
     /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -20,7 +21,7 @@ const Nav = () => {
                 <a href={"/kontakt"}>Kontakt</a>
                 <CartIcon />
                 <a href="#" className="icon" onClick={myFunction}>
-                    <i className="fa fa-bars"></i>
+                    <Hamburger duration={0.5} />
                 </a>
             </div>
         </>

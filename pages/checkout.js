@@ -1,8 +1,8 @@
 import React from 'react';
-import { useState, useContext } from 'react';
-import { AppContext } from '../Components/Context/AppContext';
 import emailjs from 'emailjs-com';
 import Link from 'next/link';
+import { useState, useContext } from 'react';
+import { AppContext } from '../Components/Context/AppContext';
 
 export default function ContactUs() {
     const [cart, setCart] = useContext(AppContext);
@@ -29,6 +29,8 @@ export default function ContactUs() {
         user_adress.value = "";
         postnummer.value = "";
         postort.value = "";
+        const emptyCart = localStorage.removeItem('hjartanavguld');
+        setCart(emptyCart)
     }
 
     return (
@@ -53,15 +55,7 @@ export default function ContactUs() {
                 <input type="hidden" name="products" readOnly value="Produktinfo" />
                 <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
                 <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
-                <div>Totalbelopp: {cart.totalProductsPrice} kr <br />
-                Antal Produkter: {cart.totalProductsCount} <br />
-                Produkter: {cart.products.length && (
-                        cart.products.map(item => (
-                            <p>{item.name}</p>
-                        ))
-                    )}
-                </div>
-                <input type="submit" value="Slutför köp" />
+                <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />
             </form>
         </>
     );
