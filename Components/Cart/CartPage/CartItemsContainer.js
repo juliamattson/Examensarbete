@@ -102,9 +102,6 @@ const CartItemsContainer = () => {
                     <hr />
                     <ContactUs />
                     <hr />
-                    <Link href="/checkout">
-                        <button className="btn btn-secondary mt-2">Slutför köp</button>
-                    </Link>
 
                 </div>
             ) : (

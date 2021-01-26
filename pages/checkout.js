@@ -2,16 +2,13 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { AppContext } from '../Components/Context/AppContext';
 import emailjs from 'emailjs-com';
+import Link from 'next/link';
 
 export default function ContactUs() {
     const [cart, setCart] = useContext(AppContext);
-    console.log(cart)
 
-    const existingProducts = () => {
-        cart.products.forEach(product => {
-            <p>{product.name}</p>
-
-        });
+    const toConfirmation = () => {
+        window.location = "/confirmation"
     }
 
     function sendEmail(e) {
@@ -23,28 +20,49 @@ export default function ContactUs() {
             }, (error) => {
                 console.log(error.text);
             });
+
+        toConfirmation();
+        user_name.value = "";
+        personnummer.value = "";
+        user_email.value = "";
+        user_phone.value = "";
+        user_adress.value = "";
+        postnummer.value = "";
+        postort.value = "";
     }
 
     return (
-        <form className="contact-form" onSubmit={sendEmail}>
-            <input type="hidden" name="contact_number" />
-            <label>Namn:</label>
-            <input type="text" name="user_name" />
-            <label>Personnummer:</label>
-            <input type="text" name="personnummer" />
-            <label>Epost:</label>
-            <input type="email" name="user_email" />
-            <label>Telefon:</label>
-            <input type="email" name="user_phone" />
-            <label>Adress:</label>
-            <input type="email" name="user_adress" />
-            <label>Postnummer:</label>
-            <input type="email" name="postnummer" />
-            <label>Postort:</label>
-            <input type="email" name="postort" />
-            <label>Produkter</label>
-            <textarea name="products" readOnly value={"Totalbelopp:" + cart.totalProductsPrice + "kr<br />" + "Antal produkter:" + cart.totalProductsCount} />
-            <input type="submit" value="Send" />
-        </form>
+        <>
+            <h5 className="cart-header">Kunduppgifter: </h5>
+            <form className="contact-form" onSubmit={sendEmail}>
+                <input type="hidden" name="contact_number" />
+                <label>Namn:</label>
+                <input type="text" name="user_name" required />
+                <label>Personnummer:</label>
+                <input type="text" name="personnummer" required placeholder="ÅÅMMDDNNNN" maxLength="10" minLength="10" />
+                <label>Epost:</label>
+                <input type="email" name="user_email" required />
+                <label>Telefon:</label>
+                <input type="tel" name="user_phone" required maxLength="10" minLength="10" />
+                <label>Adress:</label>
+                <input type="text" name="user_adress" required />
+                <label>Postnummer:</label>
+                <input type="text" name="postnummer" required />
+                <label>Postort:</label>
+                <input type="text" name="postort" required />
+                <input type="hidden" name="products" readOnly value="Produktinfo" />
+                <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
+                <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
+                <div>Totalbelopp: {cart.totalProductsPrice} kr <br />
+                Antal Produkter: {cart.totalProductsCount} <br />
+                Produkter: {cart.products.length && (
+                        cart.products.map(item => (
+                            <p>{item.name}</p>
+                        ))
+                    )}
+                </div>
+                <input type="submit" value="Slutför köp" />
+            </form>
+        </>
     );
 }
