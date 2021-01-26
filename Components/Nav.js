@@ -1,29 +1,29 @@
-import Burger from './Burger';
 import React, { useState } from 'react';
-import styled from 'styled-components';
-
-const NavBar = styled.nav`
-    width: 100%;
-    height: 70px;
-    border-bottom: 2px solid #f1f1f1;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #000000;
-
-    .logo {
-        margin: auto 0;
-    }
-`;
+import CartIcon from './Cart/CartIcon';
 
 const Nav = () => {
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    const myFunction = (e) => {
+        e.preventDefault();
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
     return (
-        <NavBar>
-            <div className="logo">
+        <>
+            <div className="topnav" id="myTopnav">
                 <a href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
+                <a href={"/produktsida"}>Produkter</a>
+                <a href={"/kontakt"}>Kontakt</a>
+                <CartIcon />
+                <a href="#" className="icon" onClick={myFunction}>
+                    <i className="fa fa-bars"></i>
+                </a>
             </div>
-            <Burger />
-        </NavBar>
+        </>
     )
 };
 
