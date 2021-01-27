@@ -21,6 +21,7 @@ export default function ContactUs() {
                 console.log(error.text);
             });
 
+        window.localStorage.clear();
         toConfirmation();
         user_name.value = "";
         personnummer.value = "";
@@ -29,8 +30,7 @@ export default function ContactUs() {
         user_adress.value = "";
         postnummer.value = "";
         postort.value = "";
-        const emptyCart = localStorage.removeItem('hjartanavguld');
-        setCart(emptyCart)
+
     }
 
     return (
