@@ -75,15 +75,9 @@ export default function ContactUs() {
                         <input type="text" name="postort" required />
                         <label>Postort:</label>
                     </div>
-                    <div className="inputBox">
-                        <input type="hidden" name="products" readOnly value="Produktinfo" />
-                    </div>
-                    <div className="inputBox">
-                        <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
-                    </div>
-                    <div className="inputBox">
-                        <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
-                    </div>
+                    <input type="hidden" name="products" readOnly value="Produktinfo" />
+                    <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
+                    <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
                     <div className="inputBox">
                         <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />
                     </div>
