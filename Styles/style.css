@@ -20,8 +20,7 @@
     width: 100%;
     margin-top: 10px;
 }
-<<<<<<< HEAD
-=======
+
 
 .contact-form .inputBox input,
 .contact-form .inputBox textarea {
@@ -71,7 +70,6 @@
     font-size: 18px;
 }
 
->>>>>>> Forms
 .text {
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
@@ -129,6 +127,7 @@
 .cart-icon-container {
     color: white;
 }
+
 .cart-icon-link:hover {
     text-decoration: none;
 }
@@ -205,6 +204,7 @@
     height: 70px;
     align-items: center;
 }
+
 .nav-list {
     display: flex;
     list-style-type: none;
@@ -242,47 +242,56 @@
 .logo-two {
     display: none;
 }
-.cart-element-shippingmethod-input{
+
+.cart-element-shippingmethod-input {
     display: inline-flex;
     align-items: center;
     width: 120px;
 }
+
 .cart-element-shippingmethod-input p {
     padding: 5px;
 }
-.table td, .table th {
+
+.table td,
+.table th {
     vertical-align: middle;
 }
-.cart-element-payment-input{
+
+.cart-element-payment-input {
     display: inline-flex;
     align-items: center;
     width: 120px;
 }
+
 .swish-icon {
     width: 79px;
     height: 60px;
 }
+
 .confirmation-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Raleway', sans-serif;
     border: 1px solid lightgray;
-    padding: 1rem; 
+    padding: 1rem;
     margin: 2rem;
 }
+
 .info-wrapper {
     margin: 0 auto;
     width: 80%;
     font-size: 15px;
 }
+
 .topnav {
     background-color: #333;
     overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -290,65 +299,80 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
     text-decoration: underline;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
     display: none;
     font-size: 28px;
-  }
-  .pages {
+}
+
+.pages {
     margin-top: 10px;
 }
+
 .cart-icon-link {
     margin-top: 10px;
-}  
+}
 
 @media (max-width: 768px) {
     .cart-icon-link {
         margin-top: 0;
     }
-    .topnav a:not(:first-child) {display: none;}
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
     .topnav a.icon {
         float: right;
         display: block;
     }
-    .topnav.responsive {position: relative;}
+
+    .topnav.responsive {
+        position: relative;
+    }
+
     .topnav.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .topnav.responsive a {
         float: none;
         display: block;
         text-align: left;
     }
+
     .text {
         font-family: 'Raleway', sans-serif;
         font-size: 15px;
         margin-top: 10px;
         text-align: center;
     }
+
     .delivery-method-small {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .card {
         width: 90%;
     }
+
     .header {
         font-size: 20px;
     }
@@ -357,6 +381,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .pages {
         margin-top: 0;
     }
