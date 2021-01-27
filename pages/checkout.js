@@ -7,6 +7,12 @@ import { AppContext } from '../Components/Context/AppContext';
 export default function ContactUs() {
     const [cart, setCart] = useContext(AppContext);
 
+    const productArray = cart.products;
+    const productNamesArray = productArray.map(product => {
+        return product.name
+    })
+    let stringifiedNamesArray = productNamesArray.toString();
+
     const toConfirmation = () => {
         window.location = "/confirmation"
     }
@@ -52,7 +58,7 @@ export default function ContactUs() {
                 <input type="text" name="postnummer" required />
                 <label>Postort:</label>
                 <input type="text" name="postort" required />
-                <input type="hidden" name="products" readOnly value="Produktinfo" />
+                <textarea className="hidden-textarea" name="products" defaultValue={stringifiedNamesArray} readOnly />
                 <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
                 <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
                 <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />

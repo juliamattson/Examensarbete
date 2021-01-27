@@ -259,6 +259,9 @@ label {
 .cart-icon-link {
     margin-top: 10px;
 }  
+.hidden-textarea {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .cart-icon-link {
