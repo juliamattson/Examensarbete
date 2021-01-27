@@ -1,9 +1,77 @@
 .contact-form {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+
+
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    margin-top: 10px;
-    text-align: center;
+
 }
+
+.contact-form h5 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+<<<<<<< HEAD
+=======
+
+.contact-form .inputBox input,
+.contact-form .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: 666;
+}
+
+.contact-form .inputBox input:focus~label,
+.contact-form .inputBox input:valid~label {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+
+}
+
+.contact-form .inputBox textarea:focus~label,
+.contact-form .inputBox textarea:valid~label {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-form .inputBox input[type="submit"] {
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+>>>>>>> Forms
 .text {
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
@@ -11,20 +79,7 @@
     text-align: center;
 }
 
-input {
-    width: 50%;
-    padding: 0 5;
-}
 
-textarea {
-    width: 100%;
-}
-
-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-
-}
 
 /* knappen på kontakt */
 .wpcf7-submit {

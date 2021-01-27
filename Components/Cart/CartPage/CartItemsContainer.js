@@ -66,13 +66,13 @@ const CartItemsContainer = () => {
                     <table className="table">
                         <tbody>
                             <tr className="table-light delivery-method-small">
-                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="pickup" />  Hämta</td>
+                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="pickup" value="00,00" />  Hämta</td>
                                 <td className="cart-element-shippingmethod-2">Hämta upp varorna hos oss enligt överenskommelse.</td>
                                 <td className="cart-element-shippingmethod-3">+ 00,00 SEK</td>
                             </tr>
                             <hr />
                             <tr className="table-light delivery-method-small">
-                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="postnord" /> Postnord</td>
+                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="postnord" value="29,00" /> Postnord</td>
                                 <td className="cart-element-shippingmethod-2">Vi skickar med Postnord efter erhållen betalning via Swish, fraktavgift tillkommer.</td>
                                 <td className="cart-element-shippingmethod-3">+ 29,00 SEK</td>
                             </tr>
@@ -84,7 +84,7 @@ const CartItemsContainer = () => {
                         <tbody>
                             <tr className="table-light delivery-method-small">
                                 <td className="cart-element-payment-input"><input type="radio" defaultChecked /><img className="swish-icon" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/Swish_payment-Logo.wine_.png" /></td>
-                                <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp</td>
+                                <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp. Belopp att swisha ser du här nedanför.</td>
                                 <td className="cart-element-payment">+ 00,00 SEK</td>
                             </tr>
                         </tbody>
