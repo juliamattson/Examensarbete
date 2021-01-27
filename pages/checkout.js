@@ -41,28 +41,54 @@ export default function ContactUs() {
 
     return (
         <>
-            <h5 className="cart-header">Kunduppgifter: </h5>
-            <form className="contact-form" onSubmit={sendEmail}>
-                <input type="hidden" name="contact_number" />
-                <label>Namn:</label>
-                <input type="text" name="user_name" required />
-                <label>Personnummer:</label>
-                <input type="text" name="personnummer" required placeholder="ÅÅMMDDNNNN" maxLength="10" minLength="10" />
-                <label>Epost:</label>
-                <input type="email" name="user_email" required />
-                <label>Telefon:</label>
-                <input type="tel" name="user_phone" required maxLength="10" minLength="10" />
-                <label>Adress:</label>
-                <input type="text" name="user_adress" required />
-                <label>Postnummer:</label>
-                <input type="text" name="postnummer" required />
-                <label>Postort:</label>
-                <input type="text" name="postort" required />
-                <textarea className="hidden-textarea" name="products" defaultValue={stringifiedNamesArray} readOnly />
-                <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
-                <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
-                <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />
-            </form>
+            <div className="contactForm">
+                <h5 className="cart-header">Kunduppgifter: </h5>
+                <form className="contact-form" onSubmit={sendEmail}>
+                    <div className="inputBox">
+                        <input type="hidden" name="contact_number" />
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="user_name" required />
+                        <label>Namn:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="personnummer" required />
+                        <label>Personnummer:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="email" name="user_email" required />
+                        <label>Epost:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="tel" name="user_phone" required maxLength="10" minLength="10" />
+                        <label>Telefon:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="user_adress" required />
+                        <label>Adress:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="postnummer" required />
+                        <label>Postnummer:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="postort" required />
+                        <label>Postort:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="hidden" name="products" readOnly value="Produktinfo" />
+                    </div>
+                    <div className="inputBox">
+                        <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
+                    </div>
+                    <div className="inputBox">
+                        <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
+                    </div>
+                    <div className="inputBox">
+                        <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />
+                    </div>
+                </form>
+            </div>
         </>
     );
 }
