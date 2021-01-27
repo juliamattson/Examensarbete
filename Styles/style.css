@@ -328,6 +328,9 @@
 .hidden-textarea {
     display: none;
 }
+#pickup, #postnord {
+    margin-right: 5px;
+}
 
 @media (max-width: 768px) {
     .cart-icon-link {
