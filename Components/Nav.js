@@ -17,8 +17,8 @@ const Nav = () => {
         <>
             <div className="topnav" id="myTopnav">
                 <a href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
-                <a href={"/produktsida"}>Produkter</a>
-                <a href={"/kontakt"}>Kontakt</a>
+                <a className="pages" href={"/produktsida"}>Produkter</a>
+                <a className="pages" href={"/kontakt"}>Kontakt</a>
                 <CartIcon />
                 <a href="#" className="icon" onClick={myFunction}>
                     <Hamburger duration={0.5} />
