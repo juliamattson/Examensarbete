@@ -11,7 +11,8 @@ export default function ContactUs() {
     const productNamesArray = productArray.map(product => {
         return product.name
     })
-    let stringifiedNamesArray = productNamesArray.toString();
+    let modifiedArray = productNamesArray.join(' + ')
+    let stringifiedNamesArray = modifiedArray.toString();
 
     const toConfirmation = () => {
         window.location = "/confirmation"
@@ -75,7 +76,7 @@ export default function ContactUs() {
                         <input type="text" name="postort" required />
                         <label>Postort:</label>
                     </div>
-                    <input type="hidden" name="products" readOnly value="Produktinfo" />
+                    <textarea className="hidden-textarea" name="products" readOnly defaultValue={stringifiedNamesArray} />
                     <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
                     <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
                     <div className="inputBox">
