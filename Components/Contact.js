@@ -25,24 +25,34 @@ export default function Contact() {
 
     return (
         <>
-            <h5 className="cart-header">Dina kontaktuppgifter: </h5>
-            <form className="contact-form" onSubmit={sendEmail}>
-                <input type="hidden" name="contact_number" />
-                <label>Namn:</label>
-
-                <input type="text" name="user_name" required />
-                <label>Epost:</label>
-
-                <input type="email" name="user_email" required />
-                <label>Telefon:</label>
-
-                <input type="tel" name="user_phone" maxLength="10" minLength="10" />
-                <label>Ditt meddelande:</label>
-
-                <textarea type="message" name="user_message" />
-
-                <input type="submit" value="Skicka" />
-            </form>
+            <div className="contactForm">
+                <h5 className="cart-header">Dina kontaktuppgifter: </h5>
+                <form className="contact-form" onSubmit={sendEmail}>
+                    <div className="inputBox">
+                        <input type="hidden" name="contact_number" />
+                        <label>Namn:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="text" name="user_name" required />
+                        <label>Namn:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="email" name="user_email" required />
+                        <label>E-post:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="tele" name="user_phone" required />
+                        <label>Telefon:</label>
+                    </div>
+                    <div className="inputBox">
+                        <textarea type="message" name="user_message" required />
+                        <label>Ditt meddelande:</label>
+                    </div>
+                    <div className="inputBox">
+                        <input type="submit" name="" value="Skicka" />
+                    </div>
+                </form>
+            </div>
         </>
     );
 }
