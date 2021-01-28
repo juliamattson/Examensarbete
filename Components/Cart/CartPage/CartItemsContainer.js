@@ -10,7 +10,8 @@ import ContactUs from '../../../pages/checkout';
 
 const CartItemsContainer = () => {
     const [cart, setCart] = useContext(AppContext);
-    console.log(cart)
+    const [radio, setRadio] = useState('00,00')
+
     const removeProductClick = (event, productId) => {
 
         const updatedCart = removeItemFromCart(productId)
@@ -19,8 +20,8 @@ const CartItemsContainer = () => {
 
     };
 
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return (
+
         <div>
             {cart ? (
                 <div className="cart-wrapper container">
@@ -63,21 +64,25 @@ const CartItemsContainer = () => {
                     </table>
                     <hr />
                     <h5 className="cart-header">Fraktsätt: </h5>
-                    <table className="table">
-                        <tbody>
-                            <tr className="table-light delivery-method-small">
-                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="pickup" value="00,00" />  Hämta</td>
-                                <td className="cart-element-shippingmethod-2">Hämta upp varorna hos oss enligt överenskommelse.</td>
-                                <td className="cart-element-shippingmethod-3">+ 00,00 SEK</td>
-                            </tr>
-                            <hr />
-                            <tr className="table-light delivery-method-small">
-                                <td className="cart-element-shippingmethod-input"><input type="radio" name="shipping-method" id="postnord" value="29,00" /> Postnord</td>
-                                <td className="cart-element-shippingmethod-2">Vi skickar med Postnord efter erhållen betalning via Swish, fraktavgift tillkommer.</td>
-                                <td className="cart-element-shippingmethod-3">+ 29,00 SEK</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form>
+                        <input type="radio"
+                            value="00,00"
+                            checked={radio === '00,00'}
+                            onChange={(e) => { setRadio(e.target.value) }}
+                            className="input-delivery-method"
+                        />
+                        <label>Hämta upp</label>
+                        <p className="delivery-method-info-text">Hämta upp dina varor hos oss enligt överenskommelse. Fyll i vem du kommit överens med under övrigt i formuläret för dina kunduppgifter längre ner på denna sidan. <br /> + 00,00 kr</p>
+                        <br />
+                        <input type="radio"
+                            value="29,00"
+                            checked={radio === '29,00'}
+                            onChange={(e) => { setRadio(e.target.value) }}
+                            className="input-delivery-method"
+                        />
+                        <label>Postnord</label>
+                        <p className="delivery-method-info-text">Vi skickar din beställning med Postnord efter erhålllen betalning via Swish, köparen står för frakten. <br />+ 29,00 kr</p>
+                    </form>
                     <hr />
                     <h5 className="cart-header">Betalsätt: </h5>
                     <table className="table">
@@ -95,12 +100,12 @@ const CartItemsContainer = () => {
                         <tbody>
                             <tr className="table-light">
                                 <td className="cart-element-total">Totalsumma (inkl frakt):</td>
-                                <td className="cart-element-total">{cart.totalProductsCount}</td>
+                                <td className="cart-element-total">{parseFloat(cart.totalProductsPrice) + parseFloat(radio)} kr</td>
                             </tr>
                         </tbody>
                     </table>
                     <hr />
-                    <ContactUs />
+                    <ContactUs totalPrice={parseFloat(cart.totalProductsPrice) + parseFloat(radio)} deliveryMethod={radio} />
                     <hr />
 
                 </div>

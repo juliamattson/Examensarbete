@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useContext } from 'react';
 import { AppContext } from '../Components/Context/AppContext';
 
-export default function ContactUs() {
+export default function ContactUs({ totalPrice, deliveryMethod }) {
     const [cart, setCart] = useContext(AppContext);
 
     const productArray = cart.products;
@@ -37,7 +37,7 @@ export default function ContactUs() {
         user_adress.value = "";
         postnummer.value = "";
         postort.value = "";
-
+        ovrigt.value = "";
     }
 
     return (
@@ -53,7 +53,7 @@ export default function ContactUs() {
                         <label>Namn:</label>
                     </div>
                     <div className="inputBox">
-                        <input type="text" name="personnummer" required />
+                        <input type="text" name="personnummer" required maxLength="10" minLength="10" />
                         <label>Personnummer:</label>
                     </div>
                     <div className="inputBox">
@@ -69,15 +69,20 @@ export default function ContactUs() {
                         <label>Adress:</label>
                     </div>
                     <div className="inputBox">
-                        <input type="text" name="postnummer" required />
+                        <input type="text" name="postnummer" required maxLength="5" minLength="5" />
                         <label>Postnummer:</label>
                     </div>
                     <div className="inputBox">
                         <input type="text" name="postort" required />
                         <label>Postort:</label>
                     </div>
+                    <div className="inputBox">
+                        <input type="text" name="ovrigt" />
+                        <label>Övrigt:</label>
+                    </div>
                     <textarea className="hidden-textarea" name="products" readOnly defaultValue={stringifiedNamesArray} />
-                    <input type="hidden" name="totalProductsPrice" readOnly value={cart.totalProductsPrice + " kr"} />
+                    <input type="hidden" name="delivery-price" readOnly value={deliveryMethod} />
+                    <input type="hidden" name="totalProductsPrice" readOnly value={totalPrice} />
                     <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
                     <div className="inputBox">
                         <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />

@@ -6,7 +6,6 @@ import { AppContext } from '../Components/Context/AppContext';
 
 const Confirmation = () => {
     const [cart, setCart] = useContext(AppContext);
-    console.log(cart)
     return (
         <Layout>
             <div className="confirmation-wrapper">

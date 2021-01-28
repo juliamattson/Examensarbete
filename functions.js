@@ -5,7 +5,6 @@ export const getFloatVal = (string) => {
 
 export const addFirstProduct = (product) => {
     let productPrice = getFloatVal(product.price)
-    console.log(productPrice)
     let newCart = {
         products: [],
         totalProductsCount: 1,
