@@ -16,7 +16,7 @@ const Index = (props) => {
     return (
         <Layout>
             <h1 className="header">{page.title}</h1>
-            <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+            <div className="indexPage" dangerouslySetInnerHTML={{ __html: page.content }} />
         </Layout>
     )
 };
