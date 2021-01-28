@@ -318,6 +318,9 @@
 }
 
 @media (max-width: 768px) {
+    .empty-cart h2 {
+       font-size: 25px;
+    }
     .delivery-method-info-text {
         font-size: 12px;
     }
