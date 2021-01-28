@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from './Header';
 import '../Styles/style.css'
 import { AppProvider } from './Context/AppContext';
+import Footer from './Footer';
 
 const Layout = (props) => {
     return (
@@ -17,6 +18,7 @@ const Layout = (props) => {
                 </Head>
                 <Header />
                 {props.children}
+                <Footer />
             </div>
         </AppProvider>
     )

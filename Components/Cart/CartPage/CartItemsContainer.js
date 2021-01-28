@@ -24,7 +24,7 @@ const CartItemsContainer = () => {
 
         <div>
             {cart ? (
-                <div className="cart-wrapper container">
+                <div className="cart-wrapper container cart-page-container">
                     <h1 className="mt-5 cart-header">Kundvagn</h1>
                     <table className="table table-hover">
                         <thead>
