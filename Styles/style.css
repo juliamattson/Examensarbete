@@ -21,15 +21,15 @@
 .text {
     float: left;
     max-width: 400px;
-    font-family: 'Lato';
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     display: flex;
-    flex-direction: column;
+    text-align: center;
     background: #00bcd4;
     color: #fff;
     padding: 3rem;
     width: 40%;
-    text-align: left;
+
 }
 
 .contactForm {
@@ -99,14 +99,7 @@
     font-size: 18px;
 }
 
-.text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    margin-top: 10px;
-    text-align: center;
 
-    width: auto;
-}
 
 .wpcf7-submit {
     font-family: 'Raleway', sans-serif;
@@ -348,23 +341,27 @@
 .delivery-method-info-text {
     font-size: 15px;
 }
+
 .index-wrapper {
     display: flex;
     flex-direction: column;
     padding-bottom: 100px;
     width: 100%;
 }
+
 .index-top-div {
     background-color: #d8e4ce;
     padding: 0 2rem;
     width: 100%;
 }
+
 .index-bottom-div {
     display: flex;
     background-color: #FFFFFF;
     width: 100%;
     justify-content: space-evenly;
 }
+
 .homepage-mini-images {
     width: 120px;
     height: 120px;
@@ -512,5 +509,143 @@ body {
 
     .pages {
         margin-top: 0;
+    }
+
+    /* .text,
+    .contactForm {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .inputBox,
+    textarea {
+        max-width: 340px;
+        margin: 0 auto;
+    } */
+
+
+    .contactPage {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 53rem;
+    }
+
+    .text {
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+
+
+
+
+
+
+
+    .contactForm {
+        margin: 0 auto;
+        padding-top: 1rem;
+        width: 100%;
+        float: right;
+    }
+
+
+
+    .cart-header {
+        font-size: 25px;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+
+    .content {
+        margin: 0 auto;
+        padding-top: 20px;
+        position: relative;
+        max-width: 800px;
+    }
+
+
+
+    .contactForm {
+        font-family: 'Raleway', sans-serif;
+        max-width: 400px;
+        float: right;
+        margin-top: 5px;
+    }
+
+    .cart-header {
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .contact-form .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px) {
+
+    .contactPage {
+        padding-top: 4rem;
+        padding-bottom: 53rem;
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        float: left;
+        max-width: 400px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        background: #00bcd4;
+        color: #fff;
+        padding: 3rem;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-height: 1024px) {
+    .contactPage {
+
+        padding-top: 4rem;
+        padding-bottom: 53rem;
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        float: left;
+        max-width: 400px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        background: #00bcd4;
+        color: #fff;
+        padding: 3rem;
+        width: 45%;
+    }
+
+    .contactForm {
+        font-family: 'Raleway', sans-serif;
+        max-width: 400px;
+        float: right;
+        margin-top: 5px;
+        width: 45%;
+
+
+
     }
 }
