@@ -1,16 +1,45 @@
-.contact-form {
-    width: 40%;
-    padding: 40px;
-    background: #fff;
-
-
-
-    font-family: 'Raleway', sans-serif;
-    padding-bottom: 120px;
-
+.contactPage {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    max-width: initial;
+    min-height: 750px;
+    padding-bottom: 7rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-top: 5rem;
+    padding-bottom: 50rem;
 }
 
-.contact-form h5 {
+.content {
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    max-width: 800px;
+}
+
+.text {
+    float: left;
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    background: #00bcd4;
+    color: #fff;
+    padding: 3rem;
+    width: 40%;
+    text-align: left;
+}
+
+.contactForm {
+    font-family: 'Raleway', sans-serif;
+    max-width: 400px;
+    float: right;
+    margin-top: 5px;
+}
+
+.cart-header {
     font-size: 30px;
     color: #333;
     font-weight: 500;
@@ -75,8 +104,10 @@
     font-size: 25px;
     margin-top: 10px;
     text-align: center;
+
+    width: auto;
 }
-/* knappen på kontakt */
+
 .wpcf7-submit {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -114,9 +145,10 @@
     font-weight: bold;
 }
 
-.cart-wrapper{
+.cart-wrapper {
     color: black;
 }
+
 .cart-header {
     font-family: 'Raleway', sans-serif;
 }
@@ -201,41 +233,51 @@
     height: 70px;
     align-items: center;
 }
+
 .nav-list {
     display: flex;
     list-style-type: none;
     padding: 0;
 }
+
 .nav-link {
     color: #ffffff;
 }
+
 .nav-link:hover {
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
 }
+
 .cart-nav-icon {
     justify-content: end;
     margin-bottom: 1.5rem;
 }
+
 .cart-count {
     margin-right: 5px;
     text-align: center;
 }
+
 .burger-menu {
     display: none;
 }
+
 .navbar-brand {
     margin: 0 0 30px 0;
 }
+
 .table td,
 .table th {
     vertical-align: middle;
 }
+
 .swish-icon {
     width: 79px;
     height: 60px;
 }
+
 .confirmation-wrapper {
     display: flex;
     flex-direction: column;
@@ -245,15 +287,18 @@
     padding: 1rem;
     margin: 2rem;
 }
+
 .info-wrapper {
     margin: 0 auto;
     width: 80%;
     font-size: 15px;
 }
+
 .topnav {
     background-color: #333;
     overflow: hidden;
 }
+
 .topnav a {
     float: left;
     display: block;
@@ -263,20 +308,25 @@
     text-decoration: none;
     font-size: 17px;
 }
+
 .topnav a:hover {
     text-decoration: underline;
 }
+
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
 }
+
 .topnav .icon {
     display: none;
     font-size: 28px;
 }
+
 .pages {
     margin-top: 10px;
 }
+
 .cart-icon-link {
     margin-top: 10px;
 }
@@ -284,15 +334,20 @@
 .hidden-textarea {
     display: none;
 }
-#pickup, #postnord {
+
+#pickup,
+#postnord {
     margin-right: 5px;
 }
+
 .input-delivery-method {
     margin-right: 5px;
 }
+
 .delivery-method-info-text {
     font-size: 15px;
 }
+
 /* Styling för footer på samtliga sidor */
 .footer {
     left: 0;
@@ -307,69 +362,86 @@
     align-items: center;
     padding: 0 2rem;
 }
+
 .footer-div {
     width: 120px;
 }
+
 .left-footer-div .company-name {
     font-size: 14px;
 }
-.left-footer-div p  {
+
+.left-footer-div p {
     font-size: 11px;
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
 .right-footer-div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .right-footer-div p {
     font-size: 11px;
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
 .middle-footer-div {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
 }
+
 .socialmedia-image {
     height: 30px;
     width: 30px;
 }
+
 .socialmedia-image:hover {
     cursor: pointer;
 }
+
 .facebook {
     height: 40px;
     width: 40px;
 }
-html{
-    position:relative; 
+
+html {
+    position: relative;
     min-height: 100%;
-  }
-  html,body{
-    margin:0;
-    padding:0;
-  }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 @media (max-width: 768px) {
     .footer {
         padding: 0 1.5rem;
     }
+
     .left-footer-div .company-name {
         font-size: 12px;
     }
+
     .footer-div {
         width: 100px;
     }
+
     .empty-cart h2 {
-       font-size: 25px;
+        font-size: 25px;
     }
+
     .delivery-method-info-text {
         font-size: 12px;
     }
+
     .cart-icon-link {
         margin-top: 0;
     }
@@ -405,6 +477,7 @@ html{
         margin-top: 10px;
         text-align: center;
     }
+
     .card {
         width: 90%;
     }
