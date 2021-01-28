@@ -48,7 +48,6 @@ const Index = (props) => {
                     </div>
                 </div>
             </div>
-
         </Layout>
     )
 };

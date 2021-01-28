@@ -15,9 +15,15 @@ const Kontakt = (props) => {
     const { page } = props;
     return (
         <Layout>
-            <h1 className="header">{page.title}</h1>
-            <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
-            <Contact />
+            <div className="contactPage">
+                <span>
+                    <h1 className="header">{page.title}</h1>
+                </span>
+                <div className="content">
+                    <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+                    <Contact />
+                </div>
+            </div>
         </Layout>
     )
 };
