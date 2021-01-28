@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { updateCart } from '../../../functions';
 
 const CartItem = ({ item, setCart, removeProductClick }) => {
     const [productCount, setProductCount] = useState(item.quantity);

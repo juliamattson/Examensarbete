@@ -2,10 +2,7 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import CartItem from './CartItem';
-import Link from 'next/link';
 import { removeItemFromCart } from '../../../functions';
-import Checkout from '../../../pages/checkout';
-import { useForm } from "react-hook-form";
 import ContactUs from '../../../pages/checkout';
 
 const CartItemsContainer = () => {

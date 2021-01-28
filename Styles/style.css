@@ -6,6 +6,7 @@
 
 
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 120px;
 
 }
 
@@ -75,9 +76,6 @@
     margin-top: 10px;
     text-align: center;
 }
-
-
-
 /* knappen på kontakt */
 .wpcf7-submit {
     font-family: 'Raleway', sans-serif;
@@ -118,9 +116,6 @@
 
 .cart-wrapper{
     color: black;
-}
-.cart-page-container {
-    padding-bottom: 70px;
 }
 .cart-header {
     font-family: 'Raleway', sans-serif;
@@ -206,41 +201,33 @@
     height: 70px;
     align-items: center;
 }
-
 .nav-list {
     display: flex;
     list-style-type: none;
     padding: 0;
 }
-
 .nav-link {
     color: #ffffff;
 }
-
 .nav-link:hover {
     color: #ffffff;
     cursor: pointer;
     font-weight: bold;
 }
-
 .cart-nav-icon {
     justify-content: end;
     margin-bottom: 1.5rem;
 }
-
 .cart-count {
     margin-right: 5px;
     text-align: center;
 }
-
 .burger-menu {
     display: none;
 }
-
 .navbar-brand {
     margin: 0 0 30px 0;
 }
-
 .table td,
 .table th {
     vertical-align: middle;
@@ -249,7 +236,6 @@
     width: 79px;
     height: 60px;
 }
-
 .confirmation-wrapper {
     display: flex;
     flex-direction: column;
@@ -259,19 +245,15 @@
     padding: 1rem;
     margin: 2rem;
 }
-
 .info-wrapper {
     margin: 0 auto;
     width: 80%;
     font-size: 15px;
 }
-
 .topnav {
     background-color: #333;
     overflow: hidden;
 }
-
-/* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     display: block;
@@ -281,28 +263,20 @@
     text-decoration: none;
     font-size: 17px;
 }
-
-/* Change the color of links on hover */
 .topnav a:hover {
     text-decoration: underline;
 }
-
-/* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
     font-size: 28px;
 }
-
 .pages {
     margin-top: 10px;
 }
-
 .cart-icon-link {
     margin-top: 10px;
 }
@@ -375,7 +349,6 @@ html{
     position:relative; 
     min-height: 100%;
   }
-  /*Normalize html and body elements,this style is just good to have*/
   html,body{
     margin:0;
     padding:0;

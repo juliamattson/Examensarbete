@@ -3,7 +3,6 @@ import CartIcon from './Cart/CartIcon';
 import { Squash as Hamburger } from 'hamburger-react';
 
 const Nav = () => {
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
     const myFunction = (e) => {
         e.preventDefault();
         var x = document.getElementById("myTopnav");
