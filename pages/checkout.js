@@ -42,7 +42,7 @@ export default function ContactUs({ totalPrice, deliveryMethod }) {
 
     return (
         <>
-            <div className="contactForm">
+            <div className="checkoutContactForm">
                 <h5 className="cart-header">Kunduppgifter: </h5>
                 <form className="contact-form" onSubmit={sendEmail}>
                     <div className="inputBox">
