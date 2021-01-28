@@ -27,14 +27,13 @@ const INDEX_QUERY = gql`query{
 
 const Index = (props) => {
     const { page } = props;
-    console.log(page.homepage_images.bild3.sourceUrl)
 
     return (
         <Layout>
             <div className="index-wrapper">
                 <div className="index-top-div">
                     <h1 className="header">{page.title}</h1>
-                    <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+                    <div className="text-index" dangerouslySetInnerHTML={{ __html: page.content }} />
                 </div>
                 <div className="index-bottom-div">
                     <div className="left">
