@@ -72,7 +72,7 @@
 
 .text {
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     text-align: center;
 }
@@ -178,9 +178,10 @@
 }
 
 .header {
-    margin-top: 10px;
+    margin-top: 2rem;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    font-size: 25px;
 }
 
 .product-price {
@@ -293,6 +294,28 @@
 .delivery-method-info-text {
     font-size: 15px;
 }
+.index-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    width: 100%;
+}
+.index-top-div {
+    background-color: #d8e4ce;
+    padding: 0 2rem;
+    width: 100%;
+}
+.index-bottom-div {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.homepage-mini-images {
+    width: 120px;
+    height: 120px;
+    margin: 2rem;
+}
 /* Styling för footer på samtliga sidor */
 .footer {
     left: 0;
@@ -300,7 +323,7 @@
     background-color: #f0c7df;
     color: #000000;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     display: flex;
     justify-content: space-evenly;
@@ -407,10 +430,6 @@ html{
     }
     .card {
         width: 90%;
-    }
-
-    .header {
-        font-size: 20px;
     }
 
     .product-wrapper {

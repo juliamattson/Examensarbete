@@ -6,17 +6,49 @@ const INDEX_QUERY = gql`query{
     page(id: "cG9zdDoxNw==") {
         title
         content
+    homepage_images {
+      fieldGroupName
+      bild1 {
+        id
+        sourceUrl
+      }
+      bild2 {
+        id
+        sourceUrl
+      }
+      bild3 {
+        id
+        sourceUrl
+      }
+    }
       }
     }
 `;
 
 const Index = (props) => {
     const { page } = props;
+    console.log(page.homepage_images.bild3.sourceUrl)
 
     return (
         <Layout>
-            <h1 className="header">{page.title}</h1>
-            <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+            <div className="index-wrapper">
+                <div className="index-top-div">
+                    <h1 className="header">{page.title}</h1>
+                    <div className="text" dangerouslySetInnerHTML={{ __html: page.content }} />
+                </div>
+                <div className="index-bottom-div">
+                    <div className="left">
+                        <img className="homepage-mini-images" src={page.homepage_images.bild1.sourceUrl} />
+                    </div>
+                    <div className="middle">
+                        <img className="homepage-mini-images" src={page.homepage_images.bild2.sourceUrl} />
+                    </div>
+                    <div className="right">
+                        <img className="homepage-mini-images" src={page.homepage_images.bild3.sourceUrl} />
+                    </div>
+                </div>
+            </div>
+
         </Layout>
     )
 };
