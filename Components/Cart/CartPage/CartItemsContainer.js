@@ -87,7 +87,7 @@ const CartItemsContainer = () => {
                             <tr className="table-light delivery-method-small">
                                 <td className="cart-element-payment-input"><input type="radio" defaultChecked /><img className="swish-icon" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/Swish_payment-Logo.wine_.png" /></td>
                                 <td className="cart-element-payment">Swisha till xxx innan du går vidare till slutför köp. Belopp att swisha ser du här nedanför.</td>
-                                <td className="cart-element-payment">+ 00,00 SEK</td>
+                                <td className="cart-element-payment">+ 00,00 kr</td>
                             </tr>
                         </tbody>
                     </table>

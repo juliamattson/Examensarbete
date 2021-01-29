@@ -406,6 +406,13 @@
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+.left, .middle, .right {
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+    padding: 11px;
+}
 
 .right-footer-div {
     display: flex;
