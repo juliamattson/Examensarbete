@@ -7,6 +7,7 @@ const Product = (props) => {
             <img src={product.image.sourceUrl} alt="produkt bild" />
             <h3 className="header">{product.name}</h3>
             <div className="product-body">
+                <div dangerouslySetInnerHTML={{ __html: product.description }} />
                 <p className="product-price">{product.price}</p>
                 <AddToCartButton product={product} />
                 {product.stockStatus == "IN_STOCK" && (
