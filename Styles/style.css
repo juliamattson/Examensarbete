@@ -1,5 +1,6 @@
 .checkoutContactForm {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     margin-top: 5px;
     margin-bottom: 100px;
     width: 85%;
@@ -12,8 +13,8 @@
     max-width: initial;
     min-height: 750px;
     padding-bottom: 7rem;
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     padding-top: 5rem;
     padding-bottom: 50rem;
 }
@@ -41,13 +42,14 @@
 
 .contactForm {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     max-width: 400px;
     float: right;
     margin-top: 5px;
 }
 
 .cart-header {
-    font-size: 30px;
+    font-size: 25px;
     color: #333;
     font-weight: 500;
 }
@@ -143,6 +145,7 @@
 
 .cart-header {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .cart-icon-container {
@@ -199,10 +202,10 @@
 
 .card {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .header {
-    margin-top: 2rem;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 25px;
@@ -216,6 +219,7 @@
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     margin-top: 1rem;
 }
 
@@ -265,6 +269,7 @@
 .table th {
     vertical-align: middle;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .swish-icon {
@@ -277,6 +282,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     border: 1px solid lightgray;
     padding: 1rem;
     margin: 2rem;
@@ -287,6 +293,7 @@
     width: 100%;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     padding-top: 20px;
     padding-bottom: 30px;
 }
@@ -344,14 +351,17 @@
 .delivery-method-info-text {
     font-size: 15px;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .product-body p {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .indexPage {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     padding-top: 15px;
 }
 
@@ -383,6 +393,12 @@
     width: 120px;
     height: 120px;
     margin: 2rem;
+}
+.product-description {
+    padding: 1rem;
+}
+.product-header {
+    margin-top: 10px;
 }
 
 /* Styling för footer på samtliga sidor */
@@ -526,6 +542,7 @@ body {
 
     .text {
         font-family: 'Raleway', sans-serif;
+        font-weight: bold;
         font-size: 15px;
         margin-top: 10px;
         text-align: center;
@@ -543,20 +560,6 @@ body {
     .pages {
         margin-top: 0;
     }
-
-    /* .text,
-    .contactForm {
-        float: none;
-        margin: 0 auto;
-    }
-
-    .inputBox,
-    textarea {
-        max-width: 340px;
-        margin: 0 auto;
-    } */
-
-
     .contactPage {
         padding-left: 4rem;
         padding-right: 4rem;
@@ -611,13 +614,14 @@ body {
 
     .contactForm {
         font-family: 'Raleway', sans-serif;
+        font-weight: bold;
         max-width: 400px;
         float: right;
         margin-top: 5px;
     }
 
     .cart-header {
-        font-size: 30px;
+        font-size: 25px;
         color: #333;
         font-weight: 500;
     }
@@ -643,6 +647,7 @@ body {
         float: left;
         max-width: 400px;
         font-family: 'Raleway', sans-serif;
+        font-weight: bold;
         font-weight: 400;
         background: #f0c7df;
         color: #333;
@@ -677,8 +682,6 @@ body {
         float: right;
         margin-top: 5px;
         width: 45%;
-
-
-
+        font-weight: bold;
     }
 }
