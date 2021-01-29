@@ -88,7 +88,6 @@ const CartItemsContainer = () => {
                         Swisha totalsumman till xxx innan du slutför köp. Din beställning kommer att skickas efter vi kan se erhållen betalning.
                         Belopp att swisha står här nedanför.
                              <br />+ 00,00 kr</p>
-                    <hr />
                     <h5 className="cart-header">Sammanfattning: </h5>
                     <table className="table">
                         <tbody>
