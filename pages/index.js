@@ -6,6 +6,11 @@ const INDEX_QUERY = gql`query{
     page(id: "cG9zdDoxNw==") {
         title
         content
+        bildtexter {
+            bildtext1
+            bildtext2
+            bildtext3
+          }
     homepage_images {
       fieldGroupName
       bild1 {
@@ -38,12 +43,15 @@ const Index = (props) => {
                 <div className="index-bottom-div">
                     <div className="left">
                         <img className="homepage-mini-images" src={page.homepage_images.bild1.sourceUrl} />
+                        <p>{page.bildtexter.bildtext1}</p>
                     </div>
                     <div className="middle">
                         <img className="homepage-mini-images" src={page.homepage_images.bild2.sourceUrl} />
+                        <p>{page.bildtexter.bildtext2}</p>
                     </div>
                     <div className="right">
                         <img className="homepage-mini-images" src={page.homepage_images.bild3.sourceUrl} />
+                        <p>{page.bildtexter.bildtext3}</p>
                     </div>
                 </div>
             </div>
