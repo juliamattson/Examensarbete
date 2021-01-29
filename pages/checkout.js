@@ -85,7 +85,7 @@ export default function ContactUs({ totalPrice, deliveryMethod }) {
                     <input type="hidden" name="totalProductsPrice" readOnly value={totalPrice} />
                     <input type="hidden" name="totalProductsCount" readOnly value={cart.totalProductsCount} />
                     <div className="inputBox">
-                        <input type="submit" value="Slutför köp" className="btn btn-secondary mt-3" />
+                        <input type="submit" name="" value="Skicka" />
                     </div>
                 </form>
             </div>
