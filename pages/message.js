@@ -1,11 +1,20 @@
-
+import React from 'react';
 import Layout from "../Components/Layout";
-
+import Link from "next/link";
+import { useState, useContext } from 'react';
+import { AppContext } from '../Components/Context/AppContext';
 
 const message = () => {
+    const [cart, setCart] = useContext(AppContext);
     return (
         <Layout>
-            <p>Ditt meddelande har mottagits, vi återkommer så snart vi kan!</p>
+            <div className="confirmation-wrapper">
+                <h4 className="mt-2 mb-2">Tack för ditt meddelande!</h4>
+                <div className="info-wrapper"><p> Ditt meddelande har mottagits, vi återkommer så snart vi kan!</p></div>
+                <Link href="/index">
+                    <button className="btn btn-secondary">Till startsidan</button>
+                </Link>
+            </div>
         </Layout>
     )
 };
