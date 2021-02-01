@@ -1,9 +1,11 @@
 .text-index p {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .policy-text p {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .checkoutContactForm {
