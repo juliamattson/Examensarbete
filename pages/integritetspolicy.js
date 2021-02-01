@@ -12,8 +12,24 @@ const Policy = (props) => {
                 </div>
                 <div className="policy-content">
                     <div className="policy-text">
-                        <h4>Ångerrätt & retur</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Ångerrätt & Retur</h4>
+                        <p>
+                            Ångerrätt
+                            Du har 14 dagars ångerrätt från den dagen varan levereras till dig i enlighet med konsumentsskyddlagstiftning.
+                            Detta gör du genom att meddela oss via e-post: info@hjartanavguld.se inom 14 dagar från det du tagit emot varan. Varan ska returneras inom 14 dagar från det datumet du meddelade oss att du ville utnyttja ångerrätten.
+                            Varan/varorna ska vara i originalskick och i originalförpackning.
+                            Du som köpare betalar returfrakten.
+                            När du ångrar ditt köp betalar Hjärtan Av Guld tillbaka beloppet du har betalt för varan via Swish, så fort returen är oss tillhanda.
+                            
+                            Garanti & Reklamation
+                            Garantin omfattar defekter som uppkommit vid tillverkning, alltså fabrikationsfel.
+                            Reklamationsrätten gäller varor som är defekta enligt konsumentlagstiftningen. Du har 3 års reklamationsrätt.
+                            Vid godkända reklamationer står Hjärtan Av Guld UF för returfrakten.
+                            Vi kompenserar dig i enlighet med konsumentlagstiftningen.
+                            Hjärtan Av Guld UF förbehåller sig rätten att neka en reklamation om det visar sig att varan inte är defekt enligt konsumentskyddslagstiftningen.
+                            Vi följer riktlinjer från allmänna reklamationsnämnden (ARN).
+                        </p>
+
                         <h4>Integritetspolicy</h4>
                         <p>Behandling av personuppgifter på Hjärtan Av Guld UF
                         2021-02-01
@@ -38,6 +54,7 @@ const Policy = (props) => {
 
                         Hur länge sparar vi dina personuppgifter?
                         Vi sparar aldrig dina personuppgifter längre än vad som är nödvändigt för respektive ändamål. Vissa uppgifter i bokföringen behöver på grund av lagstiftning till exempel sparas minst sju år.
+                        
                         Vad är dina rättigheter som registrerad?
                         Som registrerad har du enligt gällande lagstiftning ett antal rättigheter. Du har rätt till att få ett utdrag som visar vilka personuppgifter vi har registrerade om dig. Du kan begära rättelse av felaktiga uppgifter och i vissa fall radering.
                         Kontakta oss vid frågor om hur vi behandlar personuppgifter.
