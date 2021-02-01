@@ -78,7 +78,7 @@ const CartItemsContainer = () => {
                             className="input-delivery-method"
                         />
                         <label>Postnord</label>
-                        <p className="delivery-method-info-text">Vi skickar din beställning med Postnord efter erhålllen betalning via Swish, köparen står för frakten. <br />+ 29,00 kr</p>
+                        <p className="delivery-method-info-text">Vi skickar din beställning med Postnord efter erhålllen betalning via Swish, köparen står för frakten. <br /> Leveranstid 3-5 dagar. <br />+ 29 kr</p>
                     </form>
                     <hr />
                     <h5 className="cart-header">Betalsätt: </h5>

@@ -1,3 +1,7 @@
+.text-index p {
+    font-family: 'Raleway', sans-serif;
+}
+
 .checkoutContactForm {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -395,9 +399,11 @@
     height: 120px;
     margin: 2rem;
 }
+
 .product-description {
     padding: 1rem;
 }
+
 .product-header {
     margin-top: 10px;
 }
@@ -424,9 +430,11 @@
 .left-footer-div .policy {
     font-size: 14px;
 }
+
 .policy:hover {
     cursor: pointer;
 }
+
 .policyPage {
     display: flex;
     flex-direction: column;
@@ -435,15 +443,18 @@
     padding: 2rem;
     margin-bottom: 120px;
 }
+
 .policy-content {
     border: 1px solid black;
     padding: 2rem;
 }
+
 .policy-header {
     background-color: #FFFFFF;
     margin-bottom: -28px;
     z-index: 1;
 }
+
 .left-footer-div p {
     font-size: 11px;
     margin: 0;
@@ -503,6 +514,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .product-page-header h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -516,12 +528,15 @@ body {
     .product-description {
         font-size: 15px;
     }
+
     .product-header {
         font-size: 20px;
     }
+
     .product-page-header h1 {
         font-size: 30px;
     }
+
     .homepage-mini-images {
         width: 60px;
         height: 60px;
@@ -597,6 +612,7 @@ body {
     .pages {
         margin-top: 0;
     }
+
     .contactPage {
         padding-left: 4rem;
         padding-right: 4rem;

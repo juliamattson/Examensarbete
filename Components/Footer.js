@@ -7,7 +7,8 @@ const Footer = () => {
             <div className="footer">
                 <div className="left-footer-div footer-div">
                     <Link href={"/integritetspolicy"}><p className="policy">Köpvillkor</p></Link>
-                    <p>Adresss</p>
+                    <p>Västra Söbacken 29</p>
+                    <p>444 41 Stenungsund</p>
                     <p>info@hjartanavguld.se</p>
                 </div>
                 <div className="middle-footer-div footer-div">
