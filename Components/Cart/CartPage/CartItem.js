@@ -9,7 +9,7 @@ const CartItem = ({ item, setCart, removeProductClick }) => {
                 <img width="64" src={item.image.sourceUrl} srcSet={item.image.srcSet} alt={item.image.title} />
             </td>
             <td className="cart-element">{item.name}</td>
-            <td className="cart-element">{item.price}</td>
+            <td className="cart-element">{item.price} kr</td>
             <th className="cart-element cart-element-close">
                 <span className="cart-close-icon" onClick={(event) => removeProductClick(event, item.productId)}>
                     <i className="fa fa-times-circle"></i>
