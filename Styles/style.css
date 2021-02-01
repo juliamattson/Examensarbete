@@ -483,8 +483,25 @@ body {
     margin: 0;
     padding: 0;
 }
+.product-page-header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+}
 
 @media (max-width: 767px) {
+    .product-description {
+        font-size: 15px;
+    }
+    .product-header {
+        font-size: 20px;
+    }
+    .product-page-header h1 {
+        font-size: 30px;
+    }
     .homepage-mini-images {
         width: 60px;
         height: 60px;

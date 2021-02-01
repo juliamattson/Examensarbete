@@ -27,6 +27,9 @@ const ProduktSida = (props) => {
     const { products } = props;
     return (
         <Layout>
+            <div className="product-page-header">
+                <h1>Produkter</h1>
+            </div>
             <div className="product-wrapper">
                 {products.length ? (
                     products.map(product => <Product product={product} key={product.id} />)

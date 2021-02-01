@@ -9,7 +9,7 @@ const message = () => {
     return (
         <Layout>
             <div className="confirmation-wrapper">
-                <h4 className="mt-2 mb-2">Tack för ditt meddelande!</h4>
+                <h1 className="mt-2 mb-2">Tack för ditt meddelande!</h1>
                 <div className="info-wrapper"><p> Ditt meddelande har mottagits, vi återkommer så snart vi kan!</p></div>
                 <Link href="/index">
                     <button className="btn btn-secondary">Till startsidan</button>
