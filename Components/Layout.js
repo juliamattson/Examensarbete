@@ -16,6 +16,7 @@ const Layout = (props) => {
                     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
                     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet"></link>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+                    <meta name="robots" content="all" />
                 </Head>
                 <Header />
                 {props.children}
