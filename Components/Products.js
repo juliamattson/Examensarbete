@@ -8,7 +8,7 @@ const Product = (props) => {
             <h3 className="product-header">{product.name}</h3>
             <div className="product-body">
                 <div className="product-description" dangerouslySetInnerHTML={{ __html: product.description }} />
-                <p className="product-price">{product.price}</p>
+                <p className="product-price" dangerouslySetInnerHTML={{ __html: product.price }} />
                 <AddToCartButton product={product} />
                 {product.stockStatus == "IN_STOCK" && (
                     <p className="stock-status available"><i className="fa fa-circle mr-1"></i> Tillgänglig</p>
