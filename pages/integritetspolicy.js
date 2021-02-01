@@ -1,12 +1,15 @@
 
 import Layout from "../Components/Layout";
-
+import { Helmet } from 'react-helmet';
 
 const Policy = (props) => {
     const { policy } = props;
     return (
         <Layout>
             <div className="policyPage">
+            <Helmet>
+                <title>Köpvillkor - Hjärtan av guld UF</title>
+            </Helmet>
                 <div className="policy-header">
                     <h1>Köpvillkor</h1>
                 </div>

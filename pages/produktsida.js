@@ -2,6 +2,7 @@ import Layout from "../Components/Layout";
 import client from '../Components/ApolloClient';
 import Product from "../Components/Products";
 import gql from 'graphql-tag';
+import { Helmet } from 'react-helmet';
 
 const PRODUCTS_QUERY = gql`query{
     products {
@@ -28,6 +29,9 @@ const ProduktSida = (props) => {
     return (
         <Layout>
             <div className="product-page-header">
+                <Helmet>
+                    <title>Produkter - Hjärtan av guld UF</title>
+                </Helmet>
                 <h1>Produkter</h1>
             </div>
             <div className="product-wrapper">

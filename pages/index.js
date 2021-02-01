@@ -2,6 +2,7 @@ import gql from "graphql-tag";
 import client from '../Components/ApolloClient';
 import Layout from "../Components/Layout";
 import CookieConsent from "react-cookie-consent";
+import { Helmet } from 'react-helmet';
 
 const INDEX_QUERY = gql`query{
     page(id: "cG9zdDoxNw==") {
@@ -41,6 +42,9 @@ const Index = (props) => {
                 buttonStyle={{ background: "#f0c7df", }}
             >Den här hemsidan använder Cookies.</CookieConsent>
             <div className="index-wrapper">
+                <Helmet>
+                    <title>Hem - Hjärtan av guld UF</title>
+                </Helmet>
                 <div className="index-top-div">
                     <h1 className="header">{page.title}</h1>
                     <div className="text-index" dangerouslySetInnerHTML={{ __html: page.content }} />

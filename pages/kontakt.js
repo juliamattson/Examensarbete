@@ -2,6 +2,7 @@ import gql from "graphql-tag";
 import client from '../Components/ApolloClient';
 import Layout from "../Components/Layout";
 import Contact from "../Components/Contact";
+import { Helmet } from 'react-helmet';
 
 const CONTACT_QUERY = gql`query{
     page(id:"cG9zdDoyMA==") {
@@ -16,6 +17,9 @@ const Kontakt = (props) => {
     return (
         <Layout>
             <div className="contactPage">
+                <Helmet>
+                    <title>Kontakt - Hjärtan av guld UF</title>
+                </Helmet>
                 <span>
                     <h1 className="header">{page.title}</h1>
                 </span>
