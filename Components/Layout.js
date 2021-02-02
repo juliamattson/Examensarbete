@@ -3,6 +3,7 @@ import Header from './Header';
 import '../Styles/style.css'
 import { AppProvider } from './Context/AppContext';
 import Footer from './Footer';
+import MetaTags from 'react-meta-tags';
 
 const Layout = (props) => {
     return (
@@ -11,6 +12,7 @@ const Layout = (props) => {
                 <Head>
                     <link rel="icon" type="image/png" sizes="32x32" href="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/cropped-logo_dark_charcoal.png" />
                     <title>Hjärtan av guld UF</title>
+                    <meta name="description" content="Hjärtan av guld UF" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
                     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" />

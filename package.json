@@ -38,6 +38,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.14.2",
+    "react-meta-tags": "^1.0.1",
     "styled-components": "^5.2.1",
     "woocommerce-api": "^1.5.0"
   },
