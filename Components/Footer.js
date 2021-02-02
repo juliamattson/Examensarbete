@@ -12,15 +12,15 @@ const Footer = () => {
                     <p>info@hjartanavguld.se</p>
                 </div>
                 <div className="middle-footer-div footer-div">
-                    <img className="logo-image" alt="logo-image" src="https://wp.hjartanavguld.se/wp-content/uploads/2020/11/Peach-and-Gray-Watercolor-Background-Instagram-Post-5.png" />
+                    <img className="logo-image" height="50" width="50" alt="logo-image" src="https://wp.hjartanavguld.se/wp-content/uploads/2020/11/Peach-and-Gray-Watercolor-Background-Instagram-Post-5.png" />
                 </div>
                 <div className="right-footer-div footer-div">
                     <div>
                         <p>Våra sociala medier</p>
                     </div>
                     <div>
-                        <Link href="https://www.instagram.com/hjartanavguld.uf/"><img className="socialmedia-image" alt="socialmedia-image" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/insta-logo.png" /></Link>
-                        <Link href="https://www.facebook.com/125129157520942/posts/3833200376713783/"><img className="socialmedia-image facebook" alt="socialmedia-image" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/fb-logo.png" /></Link>
+                        <Link href="https://www.instagram.com/hjartanavguld.uf/"><img className="socialmedia-image" alt="socialmedia-image" height="30" width="30" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/insta-logo.png" /></Link>
+                        <Link href="https://www.facebook.com/125129157520942/posts/3833200376713783/"><img className="socialmedia-image facebook" height="40" width="40" alt="socialmedia-image" src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/fb-logo.png" /></Link>
                     </div>
                 </div>
             </div>

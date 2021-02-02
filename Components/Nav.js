@@ -15,12 +15,12 @@ const Nav = () => {
     return (
         <>
             <div className="topnav" id="myTopnav">
-                <a href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" /></a>
+                <a href={"index"}><img src="https://wp.hjartanavguld.se/wp-content/uploads/2021/01/logo_dark_charcoal.png" alt="logo" className="logo-image" width="50" height="50" /></a>
                 <a className="pages" href={"/produktsida"}>Produkter</a>
                 <a className="pages" href={"/kontakt"}>Kontakt</a>
                 <CartIcon />
-                <a href="#" className="icon" onClick={myFunction}>
-                    <Hamburger duration={0.5} />
+                <a href="#" name="mobile-icon" className="icon" onClick={myFunction}>
+                    <Hamburger name="mobile-icon" duration={0.5} />
                 </a>
             </div>
         </>

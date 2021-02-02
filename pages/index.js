@@ -51,15 +51,15 @@ const Index = (props) => {
                 </div>
                 <div className="index-bottom-div">
                     <div className="left">
-                        <img className="homepage-mini-images" src={page.homepage_images.bild1.sourceUrl} />
+                        <img className="homepage-mini-images" height="60" width="60" alt="memory-image-one" src={page.homepage_images.bild1.sourceUrl} />
                         <p>{page.bildtexter.bildtext1}</p>
                     </div>
                     <div className="middle">
-                        <img className="homepage-mini-images" src={page.homepage_images.bild2.sourceUrl} />
+                        <img className="homepage-mini-images" height="60" width="60" alt="ingen-mobbning-image" src={page.homepage_images.bild2.sourceUrl} />
                         <p>{page.bildtexter.bildtext2}</p>
                     </div>
                     <div className="right">
-                        <img className="homepage-mini-images" src={page.homepage_images.bild3.sourceUrl} />
+                        <img className="homepage-mini-images" height="60" width="60" alt="memory-image-two" src={page.homepage_images.bild3.sourceUrl} />
                         <p>{page.bildtexter.bildtext3}</p>
                     </div>
                 </div>
